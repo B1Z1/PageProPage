@@ -1,0 +1,38 @@
+/* : Gutter : */
+$gutter: (
+    normal: 40px,
+    mbl: 24px
+);
+
+/* : Query sizes : */
+$sizes: (
+    mbl: 375px,
+    tbl: 768px,
+    lpt: 1440px,
+    pc: 1600px
+);
+
+/* : Containers width : */
+$container: (
+    mbl: 329px,
+    tbl: 608px,
+    lpt: 1160px,
+);
+
+/* : Colors : */
+$colors: (
+    main: #F6F8F9,
+    white: #FFFFFF,
+    black: #000000,
+    granade: #FA6980,
+    greydarker: #A6ADB4
+);
+
+/* : Font sizes : */
+$fontSizes: (
+    small: 11px,
+    normal: 13px,
+    h3: 16px,
+    h2: 24px,
+    h1: 32px
+)

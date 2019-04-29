@@ -1,0 +1,6 @@
+/* : Ui colors : */
+@each $name, $color in $colors{
+    .ui-color--#{$name}{
+        color: $color;
+    }
+}

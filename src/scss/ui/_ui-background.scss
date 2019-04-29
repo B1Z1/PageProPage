@@ -1,0 +1,6 @@
+/* : Ui Backgrounds : */
+@each $name, $color in $colors{
+    .ui-bck--#{$name}{
+        background-color: $color;
+    }
+}

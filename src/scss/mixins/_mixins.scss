@@ -1,0 +1,24 @@
+/* : Font size mixin : */
+@mixin font-size($name) {
+    @each $type, $size in $fontSizes{
+        @if ( $name == $type){
+            font-size: $size;
+        }
+    }
+}
+
+/* : Margin generator : */
+@mixin indent($type, $top: '', $right: '', $bottom: '', $left: ''){
+    @if ( $top != '' ) {
+        #{$type}-top: #{$top};
+    }
+    @if ( $right != '' ) {
+        #{$type}-right: #{$right};
+    }
+    @if ( $bottom != '' ) {
+        #{$type}-bottom: #{$bottom};
+    }
+    @if ( $left != '' ){
+        #{$type}-left: #{$left};
+    }
+}
