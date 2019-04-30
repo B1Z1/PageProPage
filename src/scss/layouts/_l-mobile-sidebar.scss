@@ -1,0 +1,35 @@
+/*______________________
+
+Layout Mobile Sidebar
+________________________
+*/
+
+.l-mobile-sidebar{
+    position: fixed;
+    top: 0;
+    left: -85vw;
+    width: 85vw;
+    height: 100vh;
+    box-shadow: 0 0 60px rgba(0,0,0,.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: left .5s ease-in-out;
+    overflow: scroll;
+    z-index: 999;
+}
+
+/* : Elements : */
+.l-mobile-sidebar{
+}
+
+/* : Modificators : */
+.l-mobile-sidebar{
+    &--active{
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    &--indent{
+        @include indent(padding, 40px, 20px, 90px, 40px);
+    }
+}

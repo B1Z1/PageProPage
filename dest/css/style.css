@@ -1,5 +1,7 @@
 /* : Variables : */
 
+/* : Margins : */
+
 /* : Gutter : */
 
 /* : Query sizes : */
@@ -548,6 +550,88 @@ th {
   background-color: #FFFFFF;
 }
 
+/* : Margin Set : */
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.ml-40 {
+  margin-left: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mr-60 {
+  margin-right: 60px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.ml-60 {
+  margin-left: 60px;
+}
+
 /* : Columns : */
 
 .col-mbl-1,
@@ -856,7 +940,6 @@ ________________________
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: navigation;
-  margin-right: 40px;
 }
 
 .l-header__avatar {
@@ -875,6 +958,47 @@ ________________________
   margin-right: auto;
   margin-left: auto;
   padding-right: 40px;
+  padding-left: 40px;
+}
+
+/*______________________
+
+Layout Mobile Sidebar
+________________________
+*/
+
+.l-mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -85vw;
+  width: 85vw;
+  height: 100vh;
+  -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: hidden;
+  -webkit-transition: left .5s ease-in-out;
+  transition: left .5s ease-in-out;
+  overflow: scroll;
+  z-index: 999;
+}
+
+/* : Elements : */
+
+/* : Modificators : */
+
+.l-mobile-sidebar--active {
+  left: 0;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  visibility: visible;
+}
+
+.l-mobile-sidebar--indent {
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 90px;
   padding-left: 40px;
 }
 
@@ -898,20 +1022,8 @@ ________________________
   position: relative;
 }
 
-.c-list__element--mr20 {
-  margin-right: 20px;
-}
-
-.c-list__element--mr20:last-child {
-  margin-right: 0;
-}
-
-.c-list__element--mb10 {
-  margin-bottom: 10px;
-}
-
-.c-list__element--mb10:last-child {
-  margin-bottom: 0;
+.c-list__element:last-child {
+  margin: 0;
 }
 
 .c-list__element--hovopac {
@@ -979,7 +1091,32 @@ ________________________
      object-fit: cover;
 }
 
-/* Elements */
+/* : Elements : */
+
+.c-image__sygnet {
+  width: 80px;
+}
+
+.c-image__icon {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.c-image__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* : Modificators : */
+
+.c-image--transl {
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+}
 
 /*______________________
 
@@ -993,14 +1130,15 @@ Component Navigation
 ________________________
 */
 
-/* : Elements : */
-
-.c-navigation__header {
+.c-navigation {
   font-size: 11px;
   font-family: 'Helvetica-Bold', Arial;
   font-weight: 700;
   font-style: normal;
+  text-transform: uppercase;
 }
+
+/* : Elements : */
 
 .c-navigation__second {
   position: absolute;
@@ -1023,19 +1161,6 @@ ________________________
 
 .c-sygnet {
   width: 80px;
-}
-
-/*______________________
-
-Component Avatar
-________________________
-*/
-
-.c-avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  overflow: hidden;
 }
 
 /*______________________
@@ -1099,7 +1224,7 @@ ________________________
 /* : My Reset Classes : */
 
 .reset-padding {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .reset-margin {
@@ -1489,6 +1614,10 @@ ________________________
   }
 
   .l-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
         grid-template-areas: "burger sygnet avatar";
     -ms-grid-columns: auto 1fr auto;
     grid-template-columns: auto 1fr auto;
@@ -1510,7 +1639,7 @@ ________________________
     padding-left: 24px;
   }
 
-  .c-avatar {
+  .c-image__avatar {
     width: 16px;
     height: 16px;
   }

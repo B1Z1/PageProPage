@@ -22,7 +22,6 @@ ________________________
     }
     &__navigation{
         grid-area: navigation;
-        margin-right: 40px;
     } 
     &__avatar{
         grid-area: avatar;
@@ -35,6 +34,10 @@ ________________________
 
 @media only screen and ( max-width: nth(nth($sizes, 1), 2) ){
     .l-header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         grid-template-areas: 
         "burger sygnet avatar";
         grid-template-columns: auto 1fr auto;

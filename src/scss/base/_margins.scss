@@ -1,0 +1,14 @@
+@each $margin in $margins{
+    .mt-#{$margin}{
+        margin-top: #{$margin}px;        
+    }
+    .mr-#{$margin}{
+        margin-right: #{$margin}px;
+    }
+    .mb-#{$margin}{
+        margin-bottom: #{$margin}px;
+    }
+    .ml-#{$margin}{
+        margin-left: #{$margin}px;
+    }
+}

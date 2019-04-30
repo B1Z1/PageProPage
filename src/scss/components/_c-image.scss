@@ -10,4 +10,36 @@ ________________________
     object-fit: cover;
 }
 
-/* Elements */
+/* : Elements : */
+.c-image{
+    &__sygnet{
+        width: 80px;
+    }
+    &__icon{
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+    }
+    &__avatar{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+
+/* : Modificators : */
+.c-image{
+    &--transl{
+        transform: translateY(25%);
+    }
+}
+
+@media only screen and ( max-width: nth(nth($sizes, 1), 2) ){
+    .c-image{
+        &__avatar{
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

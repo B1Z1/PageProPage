@@ -5,15 +5,13 @@ ________________________
 */
 
 .c-navigation{
-
+    @include font-size('small');
+    @include font-family-getter('helvetica' , 'bold');
+    text-transform: uppercase;
 }
 
 /* : Elements : */
 .c-navigation{
-    &__header{
-        @include font-size('small');
-        @include font-family-getter('helvetica' , 'bold')
-    }
     &__second{
         position: absolute;
         top: 100%;
@@ -24,4 +22,3 @@ ________________________
         border-bottom-left-radius: 6px;
     }
 }
-
