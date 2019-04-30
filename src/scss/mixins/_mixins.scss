@@ -58,3 +58,12 @@
         font-style: italic;
     }
 }
+
+/* : Colors : */
+@mixin color($name){
+    @each $style, $color in $colors{
+        @if ( $style == $name ){
+            color: $color;
+        }
+    }
+}

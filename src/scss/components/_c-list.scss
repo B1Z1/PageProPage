@@ -1,0 +1,20 @@
+/*______________________
+
+Component List
+________________________
+*/
+
+.c-list{
+    padding: 0;
+    list-style: none;
+}
+
+/* : Modificators : */
+.c-list__element{
+    &--mr22{
+        margin-right: 22px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}

@@ -29,7 +29,8 @@
 @import "./layouts/l-footer";
 
 /* : Components : */
-@import "./components/c-avatar";
+@import "./components/c-list";
+@import "./components/c-link";
 @import "./components/c-button";
 @import "./components/c-card";
 @import "./components/c-date";
@@ -38,3 +39,8 @@
 @import "./components/c-jumbotron";
 @import "./components/c-navigation";
 @import "./components/c-sygnet";
+@import "./components/c-avatar";
+@import "./components/c-second-menu";
+
+/* : My Reset Classes : */
+@import "./base/myreset";

@@ -1,0 +1,16 @@
+/*______________________
+
+Component Navigation
+________________________
+*/
+
+.c-navigation{
+}
+
+/* : Elements : */
+.c-navigation{
+    &__header{
+        @include font-size('small');
+        @include font-family-getter('helvetica' , 'bold')
+    }
+}

@@ -18,6 +18,8 @@
 
 /* : Mixin font style : */
 
+/* : Colors : */
+
 /* : Font Faces : */
 
 /* : Helvetica Regular Include : */
@@ -501,14 +503,6 @@ th {
   color: #F6F8F9;
 }
 
-.ui-color--white {
-  color: #FFFFFF;
-}
-
-.ui-color--black {
-  color: #000000;
-}
-
 .ui-color--granade {
   color: #FA6980;
 }
@@ -517,18 +511,18 @@ th {
   color: #A6ADB4;
 }
 
+.ui-color--bluedarker {
+  color: #202124;
+}
+
+.ui-color--white {
+  color: #FFFFFF;
+}
+
 /* : Ui Backgrounds : */
 
 .ui-bck--main {
   background-color: #F6F8F9;
-}
-
-.ui-bck--white {
-  background-color: #FFFFFF;
-}
-
-.ui-bck--black {
-  background-color: #000000;
 }
 
 .ui-bck--granade {
@@ -537,6 +531,14 @@ th {
 
 .ui-bck--greydarker {
   background-color: #A6ADB4;
+}
+
+.ui-bck--bluedarker {
+  background-color: #202124;
+}
+
+.ui-bck--white {
+  background-color: #FFFFFF;
 }
 
 /* : Columns : */
@@ -588,11 +590,18 @@ th {
 .col-pc-9,
 .col-pc-10,
 .col-pc-11,
-.col-pc-12 {
+.col-pc-12,
+.col-auto {
   position: relative;
+  flex: 0 0 100%;
   width: 100%;
   padding-right: 40px;
   padding-left: 40px;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
 }
 
 .col-mbl-1 {
@@ -667,6 +676,7 @@ body {
   font-family: 'Helvetica-Regular', Arial;
   font-weight: 400;
   font-style: normal;
+  color: #202124;
   line-height: 1.5em;
 }
 
@@ -695,6 +705,10 @@ h3,
   font-size: 16px;
 }
 
+figure {
+  margin: 0;
+}
+
 /* : Flexbox : */
 
 .d-flex {
@@ -712,11 +726,33 @@ h3,
   flex-wrap: wrap;
 }
 
+/* : Align Items : */
+
+.aic {
+  align-items: center;
+}
+
+/* : Justify Content : */
+
 .jcsb {
   justify-content: space-between;
 }
 
 /* : Layouts : */
+
+/*______________________
+
+Layout Header
+________________________
+*/
+
+.l-header {
+  position: relative;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
 
 .container {
   max-width: 1240px;
@@ -727,6 +763,154 @@ h3,
 }
 
 /* : Components : */
+
+/*______________________
+
+Component List
+________________________
+*/
+
+.c-list {
+  padding: 0;
+  list-style: none;
+}
+
+/* : Modificators : */
+
+.c-list__element--mr22 {
+  margin-right: 22px;
+}
+
+.c-list__element--mr22:last-child {
+  margin-right: 0;
+}
+
+/*______________________
+
+Component Link
+________________________
+*/
+
+.c-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* : Elements : */
+
+/* : Modificators : */
+
+.c-link--inlineblck {
+  display: inline-block;
+}
+
+.c-link--hovopac {
+  opacity: .5;
+  transition: opacity .3s ease-in-out;
+}
+
+.c-link--hovopac:hover {
+  opacity: 1;
+}
+
+.c-link--active {
+  opacity: 1;
+}
+
+/*______________________
+
+Component Button
+________________________
+*/
+
+/*______________________
+
+Component Card
+________________________
+*/
+
+/*______________________
+
+Component Date
+________________________
+*/
+
+/*______________________
+
+Component Form
+________________________
+*/
+
+/*______________________
+
+Component Image
+________________________
+*/
+
+.c-image {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+/* Elements */
+
+/*______________________
+
+Component Jumbotron
+________________________
+*/
+
+/*______________________
+
+Component Navigation
+________________________
+*/
+
+/* : Elements : */
+
+.c-navigation__header {
+  font-size: 11px;
+  font-family: 'Helvetica-Bold', Arial;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*______________________
+
+Component Sygnet
+________________________
+*/
+
+.c-sygnet {
+  width: 80px;
+}
+
+/*______________________
+
+Component Avatar
+________________________
+*/
+
+.c-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*______________________
+
+Component Second Menu
+________________________
+*/
+
+/* : My Reset Classes : */
+
+.reset-padding {
+  padding: 0;
+}
 
 @media only screen and (min-width: 768px) {
   .col-tbl-1 {

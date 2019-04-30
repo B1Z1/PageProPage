@@ -5,6 +5,7 @@
 html, body{
     @include font-size('normal');
     @include font-family-getter('helvetica', 'regular');
+    @include color('bluedarker');
     line-height: 1.5em;
 }
 
@@ -22,4 +23,8 @@ h2, .h2{
 
 h3, .h3{
     @include font-size('h3');
+}
+
+figure{
+    margin: 0;
 }
