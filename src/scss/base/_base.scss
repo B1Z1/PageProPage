@@ -4,8 +4,8 @@
 
 html, body{
     @include font-size('normal');
+    @include font-family-getter('helvetica', 'regular');
     line-height: 1.5em;
-    font-family: Helvetica, Arial;
 }
 
 h1, .h1, h2, .h2, h3, .h3{

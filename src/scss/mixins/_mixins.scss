@@ -22,3 +22,39 @@
         #{$type}-left: #{$left};
     }
 }
+
+/* : Mixin for choose one of the parent Font family Acumin : */
+@mixin font-family-getter($font ,$style){
+    @if ( $font == 'acumin' ){
+        font-family: acumin-pro, sans-serif;
+        @include font-style-getter($style);
+    }
+    @else if ( $font == 'helvetica' and $style == 'regular' ){
+        font-family: 'Helvetica-Regular', Arial;
+        @include font-style-getter($style);
+    }
+    @else if ( $font == 'helvetica' and $style == 'bold' ){
+        font-family: 'Helvetica-Bold', Arial;
+        @include font-style-getter($style);
+    }
+    @else if ( $font == 'helvetica' and $style == 'oblique' ){
+        font-family: 'Helvetica-Oblique', Arial;
+        @include font-style-getter($style);
+    }
+}
+
+/* : Mixin font style : */
+@mixin font-style-getter($style){
+    @if ( $style == 'bold' ){
+        font-weight: 700;
+        font-style: normal;
+    }
+    @else if ( $style == 'regular' ){
+        font-weight: 400;
+        font-style: normal;
+    }
+    @else if ( $style == 'oblique' ){
+        font-weight: 300;
+        font-style: italic;
+    }
+}

@@ -1,0 +1,23 @@
+/* : Helvetica Regular Include : */
+@font-face{
+    font-family: "Helvetica-Regular";
+    src: url("../fonts/Helvetica/Helvetica-Regular.woff") format('woff');
+    font-style: normal;
+    font-weight: 400; 
+}
+
+/* : Helvetica Bold Include : */
+@font-face{
+    font-family: "Helvetica-Bold";
+    src: url("../fonts/Helvetica/Helvetica-Bold.woff") format('woff');
+    font-style: normal;
+    font-weight: 600; 
+}
+
+/* : Helvetica Oblique Include : */
+@font-face{
+    font-family: "Helvetica-Oblique";
+    src: url("../fonts/Helvetica/Helvetica-Oblique.woff") format('woff');
+    font-style: italic;
+    font-weight: 300; 
+}
