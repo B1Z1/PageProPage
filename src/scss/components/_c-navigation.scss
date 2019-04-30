@@ -5,6 +5,7 @@ ________________________
 */
 
 .c-navigation{
+
 }
 
 /* : Elements : */
@@ -12,5 +13,25 @@ ________________________
     &__header{
         @include font-size('small');
         @include font-family-getter('helvetica' , 'bold')
+    }
+    &__secondtrigger{
+        position: relative;
+        &:hover .c-navigation__second{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__second{
+        position: absolute;
+        @include indent(padding, 20px, 20px, 20px, 20px);
+        top: calc(100% + 20px);
+        left: -20px;
+        width: 200px;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+        transition-delay: .2s;
     }
 }

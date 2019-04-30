@@ -752,6 +752,7 @@ ________________________
   padding-right: 20px;
   padding-bottom: 10px;
   padding-left: 20px;
+  text-transform: uppercase;
 }
 
 .container {
@@ -777,12 +778,28 @@ ________________________
 
 /* : Modificators : */
 
-.c-list__element--mr22 {
-  margin-right: 22px;
+.c-list__element--mr20 {
+  margin-right: 20px;
 }
 
-.c-list__element--mr22:last-child {
+.c-list__element--mr20:last-child {
   margin-right: 0;
+}
+
+.c-list__element--mr40 {
+  margin-right: 40px;
+}
+
+.c-list__element--mr40:last-child {
+  margin-right: 0;
+}
+
+.c-list__element--mb10 {
+  margin-bottom: 10px;
+}
+
+.c-list__element--mb10:last-child {
+  margin-bottom: 0;
 }
 
 /*______________________
@@ -877,6 +894,32 @@ ________________________
   font-style: normal;
 }
 
+.c-navigation__secondtrigger {
+  position: relative;
+}
+
+.c-navigation__secondtrigger:hover .c-navigation__second {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-navigation__second {
+  position: absolute;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  top: calc(100% + 20px);
+  left: -20px;
+  width: 200px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  transition-delay: .2s;
+}
+
 /*______________________
 
 Component Sygnet
@@ -899,12 +942,6 @@ ________________________
   border-radius: 50%;
   overflow: hidden;
 }
-
-/*______________________
-
-Component Second Menu
-________________________
-*/
 
 /* : My Reset Classes : */
 
