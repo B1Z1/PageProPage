@@ -1,0 +1,27 @@
+/*______________________
+
+Component Fade
+________________________
+*/
+
+.c-fade{
+    display: none;
+    &:checked + .c-fade__target{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* : Elements : */
+.c-fade{
+    &__target{
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    }
+    &__arrow{
+        vertical-align: middle;
+        @include font-size('normal');
+        cursor: pointer;
+    }
+}

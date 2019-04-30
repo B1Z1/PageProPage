@@ -1,5 +1,5 @@
 <!-- : Component Navigation Second Menu Start : -->
-<!-- !!! Must have in parent element, class "c-navigation__hovtrigger" if you want insert this !!! -->
+<!-- !!! Must have in parent element, class "c-fade" if you want insert this !!! -->
 <nav class="c-navigation__second">
     <ul class="c-list">
         <li class="c-list__element"><a href="#" class="c-link c-link--hovopac">World news</a></li>

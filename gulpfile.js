@@ -4,7 +4,13 @@ const clean = require('gulp-clean-css');
 const gcmq = require('gulp-group-css-media-queries');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
 const browsersync = require('browser-sync');
+
+const processorsArray = [
+    require('autoprefixer')({ grid: true, browsers: ['last 2 versions', 'ie 6-8', 'Firefox > 20']  }),
+    require('cssgrace')
+]
 
 function browserSync(done){
     browsersync.init({
@@ -25,6 +31,7 @@ function style(){
     return gulp.src('./src/scss/**/*.{scss,sass}')
                 .pipe(sass().on('error', sass.logError))
                 .pipe(gcmq())
+                .pipe(postcss(processorsArray))
                 .pipe(gulp.dest('./dest/css'));
 }
 

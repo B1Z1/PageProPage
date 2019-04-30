@@ -67,3 +67,12 @@
         }
     }
 }
+
+/* : Background colors : */
+@mixin background-color($name){
+    @each $style, $color in $colors{
+        @if ( $style == $name ){
+            background-color: $color;
+        }
+    }
+}

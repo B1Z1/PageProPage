@@ -5,7 +5,49 @@ ________________________
 */
 
 .l-header{
+    display: grid;
+    grid-template-areas: 
+    "sygnet . navigation avatar";
+    grid-template-columns: auto 1fr auto auto;
     position: relative;
     @include indent(padding, 10px, 20px, 10px, 20px);
     text-transform: uppercase;
+}
+
+/* : Components : */
+.l-header{
+    &__sygnet{
+        grid-area: sygnet;
+        text-align: center;
+    }
+    &__navigation{
+        grid-area: navigation;
+        margin-right: 40px;
+    } 
+    &__avatar{
+        grid-area: avatar;
+    }
+    &__burger{
+        display: none;
+        grid-area: burger;
+    }
+}
+
+@media only screen and ( max-width: nth(nth($sizes, 1), 2) ){
+    .l-header{
+        grid-template-areas: 
+        "burger sygnet avatar";
+        grid-template-columns: auto 1fr auto;
+    }
+
+
+    /* : Components : */
+    .l-header{
+        &__navigation{
+            display: none;
+        }
+        &__burger{
+            display: block;
+        }
+    }
 }

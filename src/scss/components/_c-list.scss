@@ -6,19 +6,15 @@ ________________________
 
 .c-list{
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 
 /* : Modificators : */
 .c-list__element{
+    position: relative;
     &--mr20{
         margin-right: 20px;
-        &:last-child{
-            margin-right: 0;
-        }
-    }
-    &--mr40{
-        margin-right: 40px;
         &:last-child{
             margin-right: 0;
         }
@@ -27,6 +23,13 @@ ________________________
         margin-bottom: 10px;
         &:last-child{
             margin-bottom: 0;
+        }
+    }
+    &--hovopac{
+        opacity: .5;
+        transition: opacity .3s ease-in-out;
+        &:hover{
+            opacity: 1;
         }
     }
 }

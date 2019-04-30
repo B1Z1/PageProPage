@@ -7,6 +7,7 @@ ________________________
 .c-link{
     color: inherit;
     text-decoration: inherit;
+    vertical-align: middle;
 }
 
 /* : Elements : */
@@ -16,17 +17,5 @@ ________________________
 
 /* : Modificators : */
 .c-link{
-    &--inlineblck{
-        display: inline-block;
-    }
-    &--hovopac{
-        opacity: .5;
-        transition: opacity .3s ease-in-out;
-        &:hover{
-            opacity: 1;
-        }
-    }
-    &--active{
-        opacity: 1;
-    }
+
 }
