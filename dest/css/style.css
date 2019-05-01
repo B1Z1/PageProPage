@@ -2592,6 +2592,10 @@ ________________________
     display: block;
   }
 
+  .l-footer {
+    display: none;
+  }
+
   /* : Elements : */
 
   .c-image__avatar {

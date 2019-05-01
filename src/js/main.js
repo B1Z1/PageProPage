@@ -38,6 +38,16 @@ window.addEventListener('load', ()=>{
           }
     });
 
+    const validation = new Validation({
+        form: 'c-form',
+        elements: [
+            {
+                class: 'c-input__newsletter',
+                validateBy: ['text', 'mail']
+            }
+        ]
+    })
+
 });
 
 /**
@@ -76,6 +86,70 @@ class ClickManipulation{
     }
     activate(){
         this.animated.classList.add(this.active);
+    }
+
+}
+
+class Validation{
+    constructor(object){
+        this.form = document.querySelector(`.${object.form}`);
+        this.inputs = object.elements;
+
+        /* : Templates : */
+        this.mailTemp = /\w@\w/;
+
+        if ( this.form )
+            this.init();
+    }
+
+    init(){
+        this.form.addEventListener('submit', (ev)=>{
+            ev.preventDefault();
+            let validated = true;
+            this.inputs.forEach((el)=>{
+                let input = document.querySelector(`.${el.class}`),
+                    types = el.validateBy;
+    
+                for ( let type of types ){
+                    if ( !this.validationRouter(type, input) ){
+                        validated = false;
+                        break;
+                    }
+                }
+
+            });
+            if ( validated ){
+                alert('Wiadomość wysłana');
+                this.clearAllInputs();
+            }
+            else{
+                alert('Proszę wpisać poprawnie maila');
+            }
+        });
+    }
+
+    //Clearing all inputs
+    clearAllInputs(){
+        this.inputs.forEach((el)=>{ 
+            let input = document.querySelector(`.${el.class}`);
+            input.value = '';
+         });
+    }
+
+    //Router
+    validationRouter(type, input){
+        switch ( type ){
+            case 'text': return this.validateByText(input.value);
+            case 'mail': return this.validateByMail(input.value);
+        }
+    }
+
+    //Validate By
+    validateByText(text){
+        return text.length > 0;
+    }
+    validateByMail(text){
+        return this.mailTemp.test(text);
     }
 
 }

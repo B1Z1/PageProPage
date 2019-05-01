@@ -24,3 +24,9 @@ ________________________
         }
     }
 }
+
+@media only screen and ( max-width: nth(nth($sizes, 1), 2) ){
+    .l-footer{
+        display: none;
+    }
+}

@@ -44,6 +44,13 @@ window.addEventListener('load', function () {
       }
     }
   });
+  var validation = new Validation({
+    form: 'c-form',
+    elements: [{
+      "class": 'c-input__newsletter',
+      validateBy: ['text', 'mail']
+    }]
+  });
 });
 /**
  * 
@@ -95,4 +102,105 @@ function () {
   }]);
 
   return ClickManipulation;
+}();
+
+var Validation =
+/*#__PURE__*/
+function () {
+  function Validation(object) {
+    _classCallCheck(this, Validation);
+
+    this.form = document.querySelector(".".concat(object.form));
+    this.inputs = object.elements;
+    /* : Templates : */
+
+    this.mailTemp = /\w@\w/;
+    if (this.form) this.init();
+  }
+
+  _createClass(Validation, [{
+    key: "init",
+    value: function init() {
+      var _this2 = this;
+
+      this.form.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var validated = true;
+
+        _this2.inputs.forEach(function (el) {
+          var input = document.querySelector(".".concat(el["class"])),
+              types = el.validateBy;
+          var _iteratorNormalCompletion = true;
+          var _didIteratorError = false;
+          var _iteratorError = undefined;
+
+          try {
+            for (var _iterator = types[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+              var type = _step.value;
+
+              if (!_this2.validationRouter(type, input)) {
+                validated = false;
+                break;
+              }
+            }
+          } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+                _iterator["return"]();
+              }
+            } finally {
+              if (_didIteratorError) {
+                throw _iteratorError;
+              }
+            }
+          }
+        });
+
+        if (validated) {
+          alert('Wiadomość wysłana');
+
+          _this2.clearAllInputs();
+        } else {
+          alert('Proszę wpisać poprawnie maila');
+        }
+      });
+    } //Clearing all inputs
+
+  }, {
+    key: "clearAllInputs",
+    value: function clearAllInputs() {
+      this.inputs.forEach(function (el) {
+        var input = document.querySelector(".".concat(el["class"]));
+        input.value = '';
+      });
+    } //Router
+
+  }, {
+    key: "validationRouter",
+    value: function validationRouter(type, input) {
+      switch (type) {
+        case 'text':
+          return this.validateByText(input.value);
+
+        case 'mail':
+          return this.validateByMail(input.value);
+      }
+    } //Validate By
+
+  }, {
+    key: "validateByText",
+    value: function validateByText(text) {
+      return text.length > 0;
+    }
+  }, {
+    key: "validateByMail",
+    value: function validateByMail(text) {
+      return this.mailTemp.test(text);
+    }
+  }]);
+
+  return Validation;
 }();
