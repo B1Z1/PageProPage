@@ -1,0 +1,19 @@
+/*______________________
+
+Component Border Bottom
+________________________
+*/
+
+.c-bordbott{
+    @include indent(padding, '', '', 40px, '');
+    @include indent(margin, '', '', 40px, '');
+    border-bottom: 2px solid;
+    @include color(white, border-color);
+}
+
+/* : Modificators : */
+.c-bordbott{
+    &--greylighter{
+        @include color(greylighter, border-color);
+    }
+}

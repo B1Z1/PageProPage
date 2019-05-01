@@ -8,10 +8,6 @@
 /* : Normalize : */
 @import "../../node_modules/normalize.scss/normalize.scss";
 
-/* : Ui : */
-@import "./ui/ui-colors";
-@import "./ui/ui-background";
-
 /* : Columns : */
 @import "./base/columns";
 
@@ -35,6 +31,8 @@
 @import "./components/c-link";
 @import "./components/c-button";
 @import "./components/c-image";
+@import "./components/c-title";
+@import "./components/c-text-opt";
 
 @import "./components/c-card";
 @import "./components/c-date";
@@ -42,6 +40,7 @@
 @import "./components/c-jumbotron";
 @import "./components/c-navigation";
 @import "./components/c-burger";
+@import "./components/c-bordbott";
 
 //Animation targets
 @import "./components/c-fade";
@@ -52,3 +51,7 @@
 
 /* : Margin Set : */
 @import "./base/margins";
+
+/* : Ui : */
+@import "./ui/ui-colors";
+@import "./ui/ui-background";

@@ -60,19 +60,15 @@
 }
 
 /* : Colors : */
-@mixin color($name){
+@mixin color($name, $act){
+    $trigger: 'true';
     @each $style, $color in $colors{
         @if ( $style == $name ){
-            color: $color;
+            #{$act}: $color;
+            $trigger: 'false';
         }
     }
-}
-
-/* : Background colors : */
-@mixin background-color($name){
-    @each $style, $color in $colors{
-        @if ( $style == $name ){
-            background-color: $color;
-        }
+    @if ( $trigger == 'true' ){
+        #{$act}: $name;
     }
 }

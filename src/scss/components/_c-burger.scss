@@ -16,7 +16,7 @@ ________________________
         height: 2px;
         @include indent(margin, '', '', 2px, '');
         border-radius: 1px;
-        @include background-color('bluedarker');
+        @include color(bluedarker, background-color);
         cursor: pointer;
         &:nth-child(2){
             width: 62.5%;

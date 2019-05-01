@@ -1,0 +1,11 @@
+/*______________________
+
+Component Global Text Options
+________________________
+*/
+
+.c-text-opt{
+    &--uppercase{
+        text-transform: uppercase;
+    }
+}

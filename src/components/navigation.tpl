@@ -1,5 +1,5 @@
 <!-- : Component Navigation Start : --> 
-<nav class="c-navigation">
+<nav class="c-navigation text-opt--uppercase">
     <ul class="c-list">
         <li class="c-list__element">Example 1</li>
         <li class="c-list__element">Example 2</li>

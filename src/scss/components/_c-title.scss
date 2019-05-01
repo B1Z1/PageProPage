@@ -1,0 +1,16 @@
+/*______________________
+
+Component Title
+________________________
+*/
+
+.c-title{
+    @include font-family-getter('helvetica', 'bold');
+}
+
+/* : Modificators : */
+.c-title{
+    &--acumin{
+        @include font-family-getter('acumin', 'bold');
+    }
+}

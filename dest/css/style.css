@@ -22,8 +22,6 @@
 
 /* : Colors : */
 
-/* : Background colors : */
-
 /* : Font Faces : */
 
 /* : Helvetica Regular Include : */
@@ -504,52 +502,6 @@ th {
   padding: 0;
 }
 
-/* : Ui : */
-
-/* : Ui colors : */
-
-.ui-color--main {
-  color: #F6F8F9;
-}
-
-.ui-color--granade {
-  color: #FA6980;
-}
-
-.ui-color--greydarker {
-  color: #A6ADB4;
-}
-
-.ui-color--bluedarker {
-  color: #202124;
-}
-
-.ui-color--white {
-  color: #FFFFFF;
-}
-
-/* : Ui Backgrounds : */
-
-.ui-bck--main {
-  background-color: #F6F8F9;
-}
-
-.ui-bck--granade {
-  background-color: #FA6980;
-}
-
-.ui-bck--greydarker {
-  background-color: #A6ADB4;
-}
-
-.ui-bck--bluedarker {
-  background-color: #202124;
-}
-
-.ui-bck--white {
-  background-color: #FFFFFF;
-}
-
 /* : Columns : */
 
 .col-mbl-1,
@@ -978,6 +930,26 @@ Component Button
 ________________________
 */
 
+.c-button {
+  padding-top: 12px;
+  padding-right: 30px;
+  padding-bottom: 12px;
+  padding-left: 30px;
+  font-size: 11px;
+  font-family: 'Helvetica-Bold', Arial;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #F6F8F9;
+  color: white;
+  border-radius: 6px;
+}
+
+/* : Modificators : */
+
+.c-button--granade {
+  background-color: #FA6980;
+}
+
 /*______________________
 
 Component Image
@@ -1020,6 +992,36 @@ ________________________
 
 /*______________________
 
+Component Title
+________________________
+*/
+
+.c-title {
+  font-family: 'Helvetica-Bold', Arial;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* : Modificators : */
+
+.c-title--acumin {
+  font-family: acumin-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*______________________
+
+Component Global Text Options
+________________________
+*/
+
+.c-text-opt--uppercase {
+  text-transform: uppercase;
+}
+
+/*______________________
+
 Component Card
 ________________________
 */
@@ -1053,7 +1055,6 @@ ________________________
   font-family: 'Helvetica-Bold', Arial;
   font-weight: 700;
   font-style: normal;
-  text-transform: uppercase;
 }
 
 /* : Elements : */
@@ -1095,6 +1096,25 @@ ________________________
 
 .c-burger__line:nth-child(2) {
   width: 62.5%;
+}
+
+/*______________________
+
+Component Border Bottom
+________________________
+*/
+
+.c-bordbott {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid;
+  border-color: white;
+}
+
+/* : Modificators : */
+
+.c-bordbott--greylighter {
+  border-color: #EBEDED;
 }
 
 /*______________________
@@ -1248,6 +1268,52 @@ ________________________
 
 .ml-60 {
   margin-left: 60px;
+}
+
+/* : Ui : */
+
+/* : Ui colors : */
+
+.ui-color--main {
+  color: #F6F8F9;
+}
+
+.ui-color--granade {
+  color: #FA6980;
+}
+
+.ui-color--greylighter {
+  color: #EBEDED;
+}
+
+.ui-color--greydarker {
+  color: #A6ADB4;
+}
+
+.ui-color--bluedarker {
+  color: #202124;
+}
+
+/* : Ui Backgrounds : */
+
+.ui-bck--main {
+  background-color: #F6F8F9;
+}
+
+.ui-bck--granade {
+  background-color: #FA6980;
+}
+
+.ui-bck--greylighter {
+  background-color: #EBEDED;
+}
+
+.ui-bck--greydarker {
+  background-color: #A6ADB4;
+}
+
+.ui-bck--bluedarker {
+  background-color: #202124;
 }
 
 @media only screen and (min-width: 768px) {
