@@ -7,10 +7,12 @@ html, body{
     @include font-family-getter('helvetica', 'regular');
     @include color(bluedarker, color);
     line-height: 1.5em;
+    overflow-x: hidden;
 }
 
 h1, .h1, h2, .h2, h3, .h3{
     @include indent(margin, 10px, '', 10px, '');
+    line-height: 1.5em;
 }
 
 h1, .h1{

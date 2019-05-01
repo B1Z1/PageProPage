@@ -19,6 +19,7 @@ ________________________
         @include indent(padding, 20px, 20px, 20px, 20px);
         border-bottom-right-radius: 6px;
         border-bottom-left-radius: 6px;
+        z-index: 999;
     }
 }
 

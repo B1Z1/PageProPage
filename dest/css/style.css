@@ -686,6 +686,7 @@ body {
   font-style: normal;
   color: #202124;
   line-height: 1.5em;
+  overflow-x: hidden;
 }
 
 h1,
@@ -696,6 +697,7 @@ h3,
 .h3 {
   margin-top: 10px;
   margin-bottom: 10px;
+  line-height: 1.5em;
 }
 
 h1,
@@ -824,7 +826,7 @@ ________________________
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1080px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 40px;
@@ -851,7 +853,7 @@ ________________________
   -webkit-transition: left .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
   transition: left .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
   overflow: scroll;
-  z-index: 999;
+  z-index: 9999;
 }
 
 /* : Elements : */
@@ -870,6 +872,66 @@ ________________________
   padding-right: 20px;
   padding-bottom: 90px;
   padding-left: 40px;
+}
+
+/*______________________
+
+Layout Main
+________________________
+*/
+
+.l-mainpage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[9];
+  grid-template-columns: repeat(9, 1fr);
+      grid-template-areas: 'header header header header header header header header header' 'jumbotron jumbotron jumbotron jumbotron jumbotron textcard textcard textcard textcard' 'trending trending trending trending trending trending trending trending trending' 'now now now now now now now now now' 'footer footer footer footer footer footer footer footer footer';
+  position: relative;
+  width: 100vw;
+}
+
+/* : Elements : */
+
+.l-mainpage__header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-area: header;
+}
+
+.l-mainpage__jumbotron {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: jumbotron;
+}
+
+.l-mainpage__textcard {
+  -ms-grid-row: 2;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 4;
+  grid-area: textcard;
+}
+
+.l-mainpage__trending {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-area: trending;
+}
+
+.l-mainpage__now {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-area: now;
+}
+
+.l-mainpage__footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-area: footer;
 }
 
 /* : Components : */
@@ -940,7 +1002,7 @@ ________________________
   font-weight: 700;
   font-style: normal;
   background-color: #F6F8F9;
-  color: white;
+  color: #FFFFFF;
   border-radius: 6px;
 }
 
@@ -1044,6 +1106,15 @@ Component Jumbotron
 ________________________
 */
 
+.c-jumbotron {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+}
+
 /*______________________
 
 Component Navigation
@@ -1070,6 +1141,7 @@ ________________________
   padding-left: 20px;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
+  z-index: 999;
 }
 
 /*______________________
@@ -1108,7 +1180,7 @@ ________________________
   padding-bottom: 40px;
   margin-bottom: 40px;
   border-bottom: 2px solid;
-  border-color: white;
+  border-color: #FFFFFF;
 }
 
 /* : Modificators : */
@@ -1294,6 +1366,10 @@ ________________________
   color: #202124;
 }
 
+.ui-color--white {
+  color: #FFFFFF;
+}
+
 /* : Ui Backgrounds : */
 
 .ui-bck--main {
@@ -1314,6 +1390,10 @@ ________________________
 
 .ui-bck--bluedarker {
   background-color: #202124;
+}
+
+.ui-bck--white {
+  background-color: #FFFFFF;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1634,9 +1714,85 @@ ________________________
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  .l-mainpage {
+        grid-template-areas: 'header header header header header header header header header' 'jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron textcard textcard textcard'         'trending trending trending trending trending trending trending trending trending' 'now now now now now now now now now' 'footer footer footer footer footer footer footer footer footer';
+  }
+  .l-mainpage__header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+  .l-mainpage__jumbotron {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+  }
+  .l-mainpage__textcard {
+    -ms-grid-row: 2;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
+  }
+  .l-mainpage__trending {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+  .l-mainpage__now {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+  .l-mainpage__footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .container {
-    max-width: 688px;
+    max-width: 528px;
+  }
+
+  .l-mainpage {
+        grid-template-areas: 'header header header header header header header header header' 'jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron' 'textcard textcard textcard textcard textcard textcard textcard textcard textcard' 'trending trending trending trending trending trending trending trending trending' 'now now now now now now now now now' 'footer footer footer footer footer footer footer footer footer';
+  }
+
+  .l-mainpage__header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+
+  .l-mainpage__jumbotron {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+
+  .l-mainpage__textcard {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+
+  .l-mainpage__trending {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+
+  .l-mainpage__now {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+
+  .l-mainpage__footer {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
   }
 }
 
@@ -1706,6 +1862,7 @@ ________________________
         grid-template-areas: "burger sygnet avatar";
     -ms-grid-columns: auto 1fr auto;
     grid-template-columns: auto 1fr auto;
+    z-index: 999;
   }
 
   /* : Components : */
@@ -1719,7 +1876,7 @@ ________________________
   }
 
   .container {
-    max-width: 528px;
+    max-width: 432px;
     padding-right: 24px;
     padding-left: 24px;
   }

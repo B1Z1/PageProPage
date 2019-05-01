@@ -41,6 +41,7 @@ ________________________
         grid-template-areas: 
         "burger sygnet avatar";
         grid-template-columns: auto 1fr auto;
+        z-index: 999;
     }
 
 

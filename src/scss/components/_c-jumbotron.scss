@@ -3,3 +3,12 @@
 Component Jumbotron
 ________________________
 */
+
+.c-jumbotron{
+    position: relative;
+    @include indent(padding, 60px, '', 60px, '');
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center;
+}
+

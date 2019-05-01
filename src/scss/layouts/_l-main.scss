@@ -1,0 +1,63 @@
+/*______________________
+
+Layout Main
+________________________
+*/
+
+.l-mainpage{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: 
+    'header header header header header header header header header'
+    'jumbotron jumbotron jumbotron jumbotron jumbotron textcard textcard textcard textcard'
+    'trending trending trending trending trending trending trending trending trending'
+    'now now now now now now now now now'
+    'footer footer footer footer footer footer footer footer footer';
+    position: relative;
+    width: 100vw;
+}
+
+/* : Elements : */
+.l-mainpage{
+    &__header{
+        grid-area: header;
+    }
+    &__jumbotron{
+        grid-area: jumbotron;
+    }
+    &__textcard{
+        grid-area: textcard;
+    }
+    &__trending{
+        grid-area: trending;
+    }
+    &__now{
+        grid-area: now;
+    }
+    &__footer{
+        grid-area: footer;
+    }
+}
+
+@media only screen and ( max-width: nth(nth($sizes, 3), 2) ){
+    .l-mainpage{
+        grid-template-areas: 
+        'header header header header header header header header header'
+        'jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron textcard textcard textcard'        
+        'trending trending trending trending trending trending trending trending trending'
+        'now now now now now now now now now'
+        'footer footer footer footer footer footer footer footer footer';
+    }
+}
+
+@media only screen and ( max-width: nth(nth($sizes, 2), 2) ){
+    .l-mainpage{
+        grid-template-areas: 
+        'header header header header header header header header header'
+        'jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron'
+        'textcard textcard textcard textcard textcard textcard textcard textcard textcard'
+        'trending trending trending trending trending trending trending trending trending'
+        'now now now now now now now now now'
+        'footer footer footer footer footer footer footer footer footer';
+    }
+}
