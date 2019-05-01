@@ -125,41 +125,8 @@ function () {
 
       this.form.addEventListener('submit', function (ev) {
         ev.preventDefault();
-        var validated = true;
 
-        _this2.inputs.forEach(function (el) {
-          var input = document.querySelector(".".concat(el["class"])),
-              types = el.validateBy;
-          var _iteratorNormalCompletion = true;
-          var _didIteratorError = false;
-          var _iteratorError = undefined;
-
-          try {
-            for (var _iterator = types[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-              var type = _step.value;
-
-              if (!_this2.validationRouter(type, input)) {
-                validated = false;
-                break;
-              }
-            }
-          } catch (err) {
-            _didIteratorError = true;
-            _iteratorError = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-                _iterator["return"]();
-              }
-            } finally {
-              if (_didIteratorError) {
-                throw _iteratorError;
-              }
-            }
-          }
-        });
-
-        if (validated) {
+        if (_this2.validateInputs()) {
           alert('Wiadomość wysłana');
 
           _this2.clearAllInputs();
@@ -167,6 +134,46 @@ function () {
           alert('Proszę wpisać poprawnie maila');
         }
       });
+    } //Validation
+
+  }, {
+    key: "validateInputs",
+    value: function validateInputs() {
+      var _this3 = this;
+
+      var validated = true;
+      this.inputs.forEach(function (el) {
+        var input = document.querySelector(".".concat(el["class"])),
+            types = el.validateBy;
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = types[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var type = _step.value;
+
+            if (!_this3.validationRouter(type, input)) {
+              validated = false;
+              break;
+            }
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+              _iterator["return"]();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+      });
+      return validated;
     } //Clearing all inputs
 
   }, {

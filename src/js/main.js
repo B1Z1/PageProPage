@@ -105,20 +105,7 @@ class Validation{
     init(){
         this.form.addEventListener('submit', (ev)=>{
             ev.preventDefault();
-            let validated = true;
-            this.inputs.forEach((el)=>{
-                let input = document.querySelector(`.${el.class}`),
-                    types = el.validateBy;
-    
-                for ( let type of types ){
-                    if ( !this.validationRouter(type, input) ){
-                        validated = false;
-                        break;
-                    }
-                }
-
-            });
-            if ( validated ){
+            if ( this.validateInputs() ){
                 alert('Wiadomość wysłana');
                 this.clearAllInputs();
             }
@@ -128,12 +115,30 @@ class Validation{
         });
     }
 
+    //Validation
+    validateInputs(){
+        let validated = true;
+
+        this.inputs.forEach((el)=>{
+            let input = document.querySelector(`.${el.class}`),
+                types = el.validateBy;
+            for ( let type of types ){
+                if ( !this.validationRouter(type, input) ){
+                    validated = false;
+                    break;
+                }
+            }
+        });
+
+        return validated;
+    }
+
     //Clearing all inputs
     clearAllInputs(){
         this.inputs.forEach((el)=>{ 
             let input = document.querySelector(`.${el.class}`);
             input.value = '';
-         });
+        });
     }
 
     //Router
