@@ -1,3 +1,9 @@
+/*______________________
+
+Layout Container
+________________________
+*/
+
 @media only screen and ( min-width: nth(nth($sizes, 3), 2) ){ // <- 1320
     .container{
         max-width: nth(nth($container, 3), 2) - nth(nth($gutter, 1), 2) * 2;

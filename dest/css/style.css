@@ -843,6 +843,12 @@ ________________________
   grid-area: burger;
 }
 
+/*______________________
+
+Layout Container
+________________________
+*/
+
 .container {
   padding-right: 24px;
   padding-left: 24px;
@@ -1043,10 +1049,6 @@ ________________________
   text-decoration: inherit;
   vertical-align: middle;
 }
-
-/* : Elements : */
-
-/* : Modificators : */
 
 /*______________________
 
@@ -1281,8 +1283,6 @@ ________________________
   position: relative;
   color: rgba(255, 255, 255, 0.5);
 }
-
-/* : Modificators : */
 
 /*______________________
 

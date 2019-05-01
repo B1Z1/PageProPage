@@ -19,9 +19,7 @@
 
 /* : Layouts : */
 @import "./layouts/l-header";
-@import "./layouts/l-wrapper";
 @import "./layouts/l-container";
-@import "./layouts/l-section";
 @import "./layouts/l-mobile-sidebar";
 @import "./layouts/l-main";
 @import "./layouts/l-footer";
@@ -37,7 +35,6 @@
 @import "./components/c-text-opt";
 
 @import "./components/c-card";
-@import "./components/c-tag";
 @import "./components/c-date";
 @import "./components/c-form";
 @import "./components/c-jumbotron";
