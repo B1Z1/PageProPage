@@ -36,3 +36,23 @@
         #{$act}: $name;
     }
 }
+
+/* : Get Font Family : */
+@mixin font-family($family, $type){
+    @each $sfamily, $types in $fontFamilys{
+        @if ( $sfamily == $family ){
+            font-family: $family;
+            @include get-style($type, $types);
+        }
+    }
+}
+
+@mixin get-style($type, $types){
+    @each $stype, $options in $types {
+        @if ( $stype == $type ){
+            @each $name, $option in $options{
+                #{$name}: $option;
+            }
+        }
+    }
+}

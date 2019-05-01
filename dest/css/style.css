@@ -20,6 +20,8 @@
 
 /* : Colors : */
 
+/* : Get Font Family : */
+
 /* : Font Faces : */
 
 /* : Helvetica Regular Include : */
@@ -678,9 +680,12 @@ th {
 
 html,
 body {
-  font-size: 13px;
   color: #202124;
   line-height: 1.5em;
+  font-family: "helvetica";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
   overflow-x: hidden;
 }
 
@@ -1011,6 +1016,9 @@ ________________________
   padding-bottom: 12px;
   padding-left: 30px;
   font-size: 11px;
+  font-family: "helvetica";
+  font-weight: 700;
+  font-style: normal;
   background-color: #F6F8F9;
   color: #FFFFFF;
   border-radius: 6px;
@@ -1081,6 +1089,12 @@ Component Title
 ________________________
 */
 
+.c-title {
+  font-family: "helvetica";
+  font-weight: 700;
+  font-style: normal;
+}
+
 /*______________________
 
 Component Global Text Options
@@ -1106,6 +1120,12 @@ ________________________
 Component Date
 ________________________
 */
+
+.c-date {
+  font-family: "helvetica";
+  font-weight: 300;
+  font-style: italic;
+}
 
 /*______________________
 
@@ -1136,6 +1156,9 @@ ________________________
 
 .c-navigation {
   font-size: 11px;
+  font-family: "helvetica";
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* : Elements : */
@@ -1220,7 +1243,7 @@ ________________________
 .c-ff-helvetica-bold {
   font-family: helvetica;
   font-weight: 700;
-  tyle: normal;
+  font-style: normal;
 }
 
 .c-ff-acumin-pro-regular {
