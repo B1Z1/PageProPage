@@ -1,15 +1,37 @@
-@each $margin in $margins{
-    .mt-#{$margin}{
-        margin-top: #{$margin}px;        
+@each $name, $size in $sizes {
+    @if ( $name == 'mbl' ){
+        @each $margin in $margins{
+            .mt-#{$margin}{
+                margin-top: #{$margin}px;        
+            }
+            .mr-#{$margin}{
+                margin-right: #{$margin}px;
+            }
+            .mb-#{$margin}{
+                margin-bottom: #{$margin}px;
+            }
+            .ml-#{$margin}{
+                margin-left: #{$margin}px;
+            }
+        }
     }
-    .mr-#{$margin}{
-        margin-right: #{$margin}px;
-    }
-    .mb-#{$margin}{
-        margin-bottom: #{$margin}px;
-    }
-    .ml-#{$margin}{
-        margin-left: #{$margin}px;
+    @else{
+        @media only screen and ( min-width: $size ) {
+            @each $margin in $margins{
+                .mt-#{$name}-#{$margin}{
+                    margin-top: #{$margin}px;        
+                }
+                .mr-#{$name}-#{$margin}{
+                    margin-right: #{$margin}px;
+                }
+                .mb-#{$name}-#{$margin}{
+                    margin-bottom: #{$margin}px;
+                }
+                .ml-#{$name}-#{$margin}{
+                    margin-left: #{$margin}px;
+                }
+            }
+        }
     }
 }
 

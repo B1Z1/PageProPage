@@ -1,0 +1,27 @@
+/*______________________
+
+Component Input
+________________________
+*/
+
+.c-input{
+    border: inherit;
+    outline: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+    background: inherit;
+}
+
+/* : Elements : */
+.c-input{
+    &__newsletter{
+        width: 100%;
+        background: transparent;
+        @include indent(padding, 14px, 44px, 14px, 20px);
+        border: 1px solid;
+        border-radius: 6px;
+        @include color(rgba(255,255,255,.2), border-color);
+    }
+}

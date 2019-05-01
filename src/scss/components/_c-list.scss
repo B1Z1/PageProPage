@@ -11,6 +11,14 @@ ________________________
 }
 
 /* : Modificators : */
+.c-list{
+    &--col2{
+        columns: 2;
+    }
+    &--col3{
+        columns: 3;
+    }
+}
 .c-list__element{
     position: relative;
     &:last-child{

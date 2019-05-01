@@ -719,6 +719,10 @@ figure {
   margin: 0;
 }
 
+button {
+  padding: 0;
+}
+
 /* : Extentions : */
 
 .d-iblock {
@@ -761,6 +765,13 @@ figure {
           align-items: center;
 }
 
+.aife {
+  -webkit-box-align: end;
+     -moz-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 /* : Justify Content : */
 
 .jcc {
@@ -775,6 +786,13 @@ figure {
      -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.jcfe {
+  -webkit-box-pack: end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 /* : Layouts : */
@@ -949,6 +967,23 @@ ________________________
   grid-area: footer;
 }
 
+/*______________________
+
+Layout Footer
+________________________
+*/
+
+.l-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* : Modificators : */
+
+.l-footer--fs11 {
+  font-size: 11px;
+}
+
 /* : Components : */
 
 /*______________________
@@ -964,6 +999,18 @@ ________________________
 }
 
 /* : Modificators : */
+
+.c-list--col2 {
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+}
+
+.c-list--col3 {
+  -webkit-columns: 3;
+     -moz-columns: 3;
+          columns: 3;
+}
 
 .c-list__element {
   position: relative;
@@ -1007,6 +1054,16 @@ Component Button
 ________________________
 */
 
+.c-button {
+  border: inherit;
+  outline: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: inherit;
+}
+
 /* : Elements : */
 
 .c-button__normal {
@@ -1032,6 +1089,14 @@ ________________________
   cursor: pointer;
 }
 
+.c-button__send {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding-right: 20px;
+}
+
 /* : Modificators : */
 
 .c-button--granade {
@@ -1040,6 +1105,36 @@ ________________________
 
 .c-button__swiper--prev {
   right: 88px;
+}
+
+/*______________________
+
+Component Input
+________________________
+*/
+
+.c-input {
+  border: inherit;
+  outline: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: inherit;
+}
+
+/* : Elements : */
+
+.c-input__newsletter {
+  width: 100%;
+  background: transparent;
+  padding-top: 14px;
+  padding-right: 44px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /*______________________
@@ -1181,6 +1276,13 @@ ________________________
 Component Form
 ________________________
 */
+
+.c-form {
+  position: relative;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* : Modificators : */
 
 /*______________________
 
@@ -1411,6 +1513,22 @@ ________________________
 
 /* : Margin Set : */
 
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mr-0 {
+  margin-right: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
 .mt-10 {
   margin-top: 10px;
 }
@@ -1473,6 +1591,22 @@ ________________________
 
 .ml-40 {
   margin-left: 40px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mr-50 {
+  margin-right: 50px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.ml-50 {
+  margin-left: 50px;
 }
 
 .mt-60 {
@@ -1695,6 +1829,134 @@ ________________________
   .reset-tbl-lpadding {
     padding-left: 0 !important;
   }
+
+  .mt-tbl-0 {
+    margin-top: 0px;
+  }
+
+  .mr-tbl-0 {
+    margin-right: 0px;
+  }
+
+  .mb-tbl-0 {
+    margin-bottom: 0px;
+  }
+
+  .ml-tbl-0 {
+    margin-left: 0px;
+  }
+
+  .mt-tbl-10 {
+    margin-top: 10px;
+  }
+
+  .mr-tbl-10 {
+    margin-right: 10px;
+  }
+
+  .mb-tbl-10 {
+    margin-bottom: 10px;
+  }
+
+  .ml-tbl-10 {
+    margin-left: 10px;
+  }
+
+  .mt-tbl-20 {
+    margin-top: 20px;
+  }
+
+  .mr-tbl-20 {
+    margin-right: 20px;
+  }
+
+  .mb-tbl-20 {
+    margin-bottom: 20px;
+  }
+
+  .ml-tbl-20 {
+    margin-left: 20px;
+  }
+
+  .mt-tbl-30 {
+    margin-top: 30px;
+  }
+
+  .mr-tbl-30 {
+    margin-right: 30px;
+  }
+
+  .mb-tbl-30 {
+    margin-bottom: 30px;
+  }
+
+  .ml-tbl-30 {
+    margin-left: 30px;
+  }
+
+  .mt-tbl-40 {
+    margin-top: 40px;
+  }
+
+  .mr-tbl-40 {
+    margin-right: 40px;
+  }
+
+  .mb-tbl-40 {
+    margin-bottom: 40px;
+  }
+
+  .ml-tbl-40 {
+    margin-left: 40px;
+  }
+
+  .mt-tbl-50 {
+    margin-top: 50px;
+  }
+
+  .mr-tbl-50 {
+    margin-right: 50px;
+  }
+
+  .mb-tbl-50 {
+    margin-bottom: 50px;
+  }
+
+  .ml-tbl-50 {
+    margin-left: 50px;
+  }
+
+  .mt-tbl-60 {
+    margin-top: 60px;
+  }
+
+  .mr-tbl-60 {
+    margin-right: 60px;
+  }
+
+  .mb-tbl-60 {
+    margin-bottom: 60px;
+  }
+
+  .ml-tbl-60 {
+    margin-left: 60px;
+  }
+
+  .mt-tbl-100 {
+    margin-top: 100px;
+  }
+
+  .mr-tbl-100 {
+    margin-right: 100px;
+  }
+
+  .mb-tbl-100 {
+    margin-bottom: 100px;
+  }
+
+  .ml-tbl-100 {
+    margin-left: 100px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1825,6 +2087,134 @@ ________________________
   .reset-lpt-lpadding {
     padding-left: 0 !important;
   }
+
+  .mt-lpt-0 {
+    margin-top: 0px;
+  }
+
+  .mr-lpt-0 {
+    margin-right: 0px;
+  }
+
+  .mb-lpt-0 {
+    margin-bottom: 0px;
+  }
+
+  .ml-lpt-0 {
+    margin-left: 0px;
+  }
+
+  .mt-lpt-10 {
+    margin-top: 10px;
+  }
+
+  .mr-lpt-10 {
+    margin-right: 10px;
+  }
+
+  .mb-lpt-10 {
+    margin-bottom: 10px;
+  }
+
+  .ml-lpt-10 {
+    margin-left: 10px;
+  }
+
+  .mt-lpt-20 {
+    margin-top: 20px;
+  }
+
+  .mr-lpt-20 {
+    margin-right: 20px;
+  }
+
+  .mb-lpt-20 {
+    margin-bottom: 20px;
+  }
+
+  .ml-lpt-20 {
+    margin-left: 20px;
+  }
+
+  .mt-lpt-30 {
+    margin-top: 30px;
+  }
+
+  .mr-lpt-30 {
+    margin-right: 30px;
+  }
+
+  .mb-lpt-30 {
+    margin-bottom: 30px;
+  }
+
+  .ml-lpt-30 {
+    margin-left: 30px;
+  }
+
+  .mt-lpt-40 {
+    margin-top: 40px;
+  }
+
+  .mr-lpt-40 {
+    margin-right: 40px;
+  }
+
+  .mb-lpt-40 {
+    margin-bottom: 40px;
+  }
+
+  .ml-lpt-40 {
+    margin-left: 40px;
+  }
+
+  .mt-lpt-50 {
+    margin-top: 50px;
+  }
+
+  .mr-lpt-50 {
+    margin-right: 50px;
+  }
+
+  .mb-lpt-50 {
+    margin-bottom: 50px;
+  }
+
+  .ml-lpt-50 {
+    margin-left: 50px;
+  }
+
+  .mt-lpt-60 {
+    margin-top: 60px;
+  }
+
+  .mr-lpt-60 {
+    margin-right: 60px;
+  }
+
+  .mb-lpt-60 {
+    margin-bottom: 60px;
+  }
+
+  .ml-lpt-60 {
+    margin-left: 60px;
+  }
+
+  .mt-lpt-100 {
+    margin-top: 100px;
+  }
+
+  .mr-lpt-100 {
+    margin-right: 100px;
+  }
+
+  .mb-lpt-100 {
+    margin-bottom: 100px;
+  }
+
+  .ml-lpt-100 {
+    margin-left: 100px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -1951,11 +2341,145 @@ ________________________
   .reset-pc-lpadding {
     padding-left: 0 !important;
   }
+
+  .mt-pc-0 {
+    margin-top: 0px;
+  }
+
+  .mr-pc-0 {
+    margin-right: 0px;
+  }
+
+  .mb-pc-0 {
+    margin-bottom: 0px;
+  }
+
+  .ml-pc-0 {
+    margin-left: 0px;
+  }
+
+  .mt-pc-10 {
+    margin-top: 10px;
+  }
+
+  .mr-pc-10 {
+    margin-right: 10px;
+  }
+
+  .mb-pc-10 {
+    margin-bottom: 10px;
+  }
+
+  .ml-pc-10 {
+    margin-left: 10px;
+  }
+
+  .mt-pc-20 {
+    margin-top: 20px;
+  }
+
+  .mr-pc-20 {
+    margin-right: 20px;
+  }
+
+  .mb-pc-20 {
+    margin-bottom: 20px;
+  }
+
+  .ml-pc-20 {
+    margin-left: 20px;
+  }
+
+  .mt-pc-30 {
+    margin-top: 30px;
+  }
+
+  .mr-pc-30 {
+    margin-right: 30px;
+  }
+
+  .mb-pc-30 {
+    margin-bottom: 30px;
+  }
+
+  .ml-pc-30 {
+    margin-left: 30px;
+  }
+
+  .mt-pc-40 {
+    margin-top: 40px;
+  }
+
+  .mr-pc-40 {
+    margin-right: 40px;
+  }
+
+  .mb-pc-40 {
+    margin-bottom: 40px;
+  }
+
+  .ml-pc-40 {
+    margin-left: 40px;
+  }
+
+  .mt-pc-50 {
+    margin-top: 50px;
+  }
+
+  .mr-pc-50 {
+    margin-right: 50px;
+  }
+
+  .mb-pc-50 {
+    margin-bottom: 50px;
+  }
+
+  .ml-pc-50 {
+    margin-left: 50px;
+  }
+
+  .mt-pc-60 {
+    margin-top: 60px;
+  }
+
+  .mr-pc-60 {
+    margin-right: 60px;
+  }
+
+  .mb-pc-60 {
+    margin-bottom: 60px;
+  }
+
+  .ml-pc-60 {
+    margin-left: 60px;
+  }
+
+  .mt-pc-100 {
+    margin-top: 100px;
+  }
+
+  .mr-pc-100 {
+    margin-right: 100px;
+  }
+
+  .mb-pc-100 {
+    margin-bottom: 100px;
+  }
+
+  .ml-pc-100 {
+    margin-left: 100px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   .l-mainpage {
         grid-template-areas: 'header header header header header header header header header' 'jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron' 'textcard textcard textcard textcard textcard textcard textcard textcard textcard' 'trending trending trending trending trending trending trending trending trending' 'now now now now now now now now now' 'footer footer footer footer footer footer footer footer footer';
+  }
+
+  /* : Elements : */
+
+  .l-footer__social {
+    height: 100%;
   }
   .l-mainpage__header {
     -ms-grid-row: 1;

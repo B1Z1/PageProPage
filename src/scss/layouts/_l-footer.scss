@@ -1,0 +1,26 @@
+/*______________________
+
+Layout Footer
+________________________
+*/
+
+.l-footer{
+    @include indent(padding, 60px, '', 60px, '');
+}
+
+
+/* : Modificators : */
+.l-footer{
+    &--fs11{
+        @include font-size('small');
+    }
+}
+
+@media only screen and ( max-width: nth(nth($sizes, 3), 2) ){
+    /* : Elements : */
+    .l-footer{
+        &__social{
+            height: 100%;
+        }
+    }
+}

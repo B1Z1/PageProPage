@@ -16,6 +16,9 @@
 .aic{
     align-items: center;
 }
+.aife{
+    align-items: flex-end;
+}
 
 /* : Justify Content : */
 .jcc{
@@ -23,6 +26,9 @@
 }
 .jcsb{
     justify-content: space-between;
+}
+.jcfe{
+    justify-content: flex-end;
 }
 
 @media only screen and ( max-width: nth(nth($sizes, 1), 2) ){

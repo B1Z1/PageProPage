@@ -5,7 +5,13 @@ ________________________
 */
 
 .c-button{
-
+    border: inherit;
+    outline: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+    background: inherit;
 }
 
 /* : Elements : */
@@ -25,6 +31,13 @@ ________________________
         width: 8px;
         outline: none;
         cursor: pointer;
+    }
+    &__send{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        @include indent(padding, '', 20px, '', '');
     }
 }
 
