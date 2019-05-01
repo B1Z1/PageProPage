@@ -5,17 +5,37 @@ ________________________
 */
 
 .c-button{
-    @include indent(padding, 12px, 30px, 12px, 30px);
-    @include font-size('small');
-    @include font-family-getter('helvetica', 'bold');
-    @include color('main', background-color);
-    @include color(white, color);
-    border-radius: 6px;
+
+}
+
+/* : Elements : */
+.c-button{
+    &__normal{
+        @include indent(padding, 12px, 30px, 12px, 30px);
+        @include font-size('small');
+        @include font-family-getter('helvetica', 'bold');
+        @include color('main', background-color);
+        @include color(white, color);
+        border-radius: 6px;
+    }
+    &__swiper{
+        position: absolute;
+        top: 0;
+        right: 40px;
+        width: 8px;
+        outline: none;
+        cursor: pointer;
+    }
 }
 
 /* : Modificators : */
 .c-button{
     &--granade{
         @include color('granade', background-color);
+    }
+    &__swiper{
+        &--prev{
+            right: 88px;
+        }
     }
 }

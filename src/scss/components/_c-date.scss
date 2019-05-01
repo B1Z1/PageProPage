@@ -3,3 +3,7 @@
 Component Date
 ________________________
 */
+
+.c-date{
+    @include font-family-getter('helvetica', 'oblique')
+}

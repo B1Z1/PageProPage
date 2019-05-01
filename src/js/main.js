@@ -6,6 +6,28 @@ window.addEventListener('load', ()=>{
         active: 'l-mobile-sidebar--active',
     });
 
+    const newsSwiper = new Swiper('#more-news', {
+        speed: 400,
+        spaceBetween: 0,
+        touchRatio: 0,
+        effect: 'fade',
+        navigation: {
+            nextEl: '.c-button__swiper--next',
+            prevEl: '.c-button__swiper--prev',
+        },
+    });
+
+    const trendingSwiper = new Swiper('#trending', {
+        speed: 400,
+        spaceBetween: 0,
+        touchRatio: 0,
+        effect: 'fade',
+        navigation: {
+            nextEl: '.c-button__swiper--next',
+            prevEl: '.c-button__swiper--prev',
+        },
+    });
+
 });
 
 /**

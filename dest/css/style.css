@@ -904,7 +904,6 @@ ________________________
   grid-template-columns: repeat(9, 1fr);
       grid-template-areas: 'header header header header header header header header header' 'jumbotron jumbotron jumbotron jumbotron jumbotron textcard textcard textcard textcard' 'trending trending trending trending trending trending trending trending trending' 'now now now now now now now now now' 'footer footer footer footer footer footer footer footer footer';
   position: relative;
-  width: 100vw;
 }
 
 /* : Elements : */
@@ -1009,7 +1008,9 @@ Component Button
 ________________________
 */
 
-.c-button {
+/* : Elements : */
+
+.c-button__normal {
   padding-top: 12px;
   padding-right: 30px;
   padding-bottom: 12px;
@@ -1023,10 +1024,23 @@ ________________________
   border-radius: 6px;
 }
 
+.c-button__swiper {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
 /* : Modificators : */
 
 .c-button--granade {
   background-color: #FA6980;
+}
+
+.c-button__swiper--prev {
+  right: 88px;
 }
 
 /*______________________
@@ -1105,11 +1119,21 @@ Component Card
 ________________________
 */
 
+.c-card {
+  position: relative;
+}
+
 /*______________________
 
 Component Date
 ________________________
 */
+
+.c-date {
+  font-family: 'Helvetica-Oblique', Arial;
+  font-weight: 300;
+  font-style: italic;
+}
 
 /*______________________
 
@@ -1127,7 +1151,7 @@ ________________________
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
-  min-height: 60vh;
+  height: 100%;
   background-size: cover;
   background-position: center;
 }
@@ -1204,6 +1228,35 @@ ________________________
 
 .c-bordbott--greylighter {
   border-color: #EBEDED;
+}
+
+/*______________________
+
+Component Swiper All Styles
+________________________
+*/
+
+.c-swiper {
+  position: relative;
+}
+
+.swiper-slide {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: hidden;
+  -webkit-transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+  transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  visibility: visible;
+}
+
+.swiper-button-disabled {
+  opacity: .3;
+  filter: alpha(opacity=30);
 }
 
 /*______________________
@@ -1357,6 +1410,26 @@ ________________________
 
 .ml-60 {
   margin-left: 60px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mr-100 {
+  margin-right: 100px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.ml-100 {
+  margin-left: 100px;
+}
+
+.m-a {
+  margin: auto;
 }
 
 /* : Ui : */
@@ -1519,7 +1592,7 @@ ________________________
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   .col-lpt-1 {
     -webkit-box-flex: 0;
        -moz-box-flex: 0;
@@ -1625,7 +1698,7 @@ ________________________
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1440px) {
   .col-pc-1 {
     -webkit-box-flex: 0;
        -moz-box-flex: 0;
@@ -1731,9 +1804,9 @@ ________________________
   }
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1024px) {
   .l-mainpage {
-        grid-template-areas: 'header header header header header header header header header' 'jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron textcard textcard textcard'         'trending trending trending trending trending trending trending trending trending' 'now now now now now now now now now' 'footer footer footer footer footer footer footer footer footer';
+        grid-template-areas: 'header header header header header header header header header' 'jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron' 'textcard textcard textcard textcard textcard textcard textcard textcard textcard' 'trending trending trending trending trending trending trending trending trending' 'now now now now now now now now now' 'footer footer footer footer footer footer footer footer footer';
   }
   .l-mainpage__header {
     -ms-grid-row: 1;
@@ -1743,25 +1816,25 @@ ________________________
   .l-mainpage__jumbotron {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
+    -ms-grid-column-span: 9;
   }
   .l-mainpage__textcard {
-    -ms-grid-row: 2;
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 3;
-  }
-  .l-mainpage__trending {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 9;
   }
-  .l-mainpage__now {
+  .l-mainpage__trending {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
     -ms-grid-column-span: 9;
   }
-  .l-mainpage__footer {
+  .l-mainpage__now {
     -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+  .l-mainpage__footer {
+    -ms-grid-row: 6;
     -ms-grid-column: 1;
     -ms-grid-column-span: 9;
   }
@@ -1770,46 +1843,6 @@ ________________________
 @media only screen and (max-width: 768px) {
   .container {
     max-width: 528px;
-  }
-
-  .l-mainpage {
-        grid-template-areas: 'header header header header header header header header header' 'jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron' 'textcard textcard textcard textcard textcard textcard textcard textcard textcard' 'trending trending trending trending trending trending trending trending trending' 'now now now now now now now now now' 'footer footer footer footer footer footer footer footer footer';
-  }
-
-  .l-mainpage__header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 9;
-  }
-
-  .l-mainpage__jumbotron {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 9;
-  }
-
-  .l-mainpage__textcard {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 9;
-  }
-
-  .l-mainpage__trending {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 9;
-  }
-
-  .l-mainpage__now {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 9;
-  }
-
-  .l-mainpage__footer {
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 9;
   }
 }
 

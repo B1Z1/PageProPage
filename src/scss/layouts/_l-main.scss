@@ -14,7 +14,6 @@ ________________________
     'now now now now now now now now now'
     'footer footer footer footer footer footer footer footer footer';
     position: relative;
-    width: 100vw;
 }
 
 /* : Elements : */
@@ -40,17 +39,6 @@ ________________________
 }
 
 @media only screen and ( max-width: nth(nth($sizes, 3), 2) ){
-    .l-mainpage{
-        grid-template-areas: 
-        'header header header header header header header header header'
-        'jumbotron jumbotron jumbotron jumbotron jumbotron jumbotron textcard textcard textcard'        
-        'trending trending trending trending trending trending trending trending trending'
-        'now now now now now now now now now'
-        'footer footer footer footer footer footer footer footer footer';
-    }
-}
-
-@media only screen and ( max-width: nth(nth($sizes, 2), 2) ){
     .l-mainpage{
         grid-template-areas: 
         'header header header header header header header header header'
