@@ -13,6 +13,27 @@ ________________________
 /* : Elements : */
 .c-card{
     &__content{
+        position: relative;
         @include indent(padding, 40px, 40px, 40px, 40px);
+    }
+}
+
+/* : Modificators : */
+.c-card{
+    &--big{
+        @include indent(padding, 288px, '', '', '');
+    }
+    &--imgabsolute{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    &--tagabsolute{
+        position: absolute;
+        top: 40px;
+        left: 40px;
     }
 }

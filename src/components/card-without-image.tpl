@@ -1,5 +1,5 @@
 <!-- : Component From Cards: Without Image Start : -->
-<div class="c-card mb-40">
+<div class="c-card c-card-woutimage mb-40">
     <div class="c-card__tag">
         <h3 class="c-tag c-text-opt--uppercase ui-color--granade reset-margin">Travel</h3>
     </div>

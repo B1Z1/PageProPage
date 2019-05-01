@@ -6,4 +6,5 @@ ________________________
 
 .c-date{
     @include font-family('helvetica', 'oblique');
+    @include color('greydarker', color);
 }
