@@ -826,7 +826,7 @@ ________________________
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 1240px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 40px;
@@ -1076,11 +1076,23 @@ ________________________
   overflow: hidden;
 }
 
+.c-image__card {
+  vertical-align: middle;
+}
+
 /* : Modificators : */
 
 .c-image--transl {
   -webkit-transform: translateY(25%);
           transform: translateY(25%);
+}
+
+.c-image--h180 {
+  height: 180px;
+}
+
+.c-image--h210 {
+  height: 210px;
 }
 
 /*______________________
@@ -1113,6 +1125,17 @@ ________________________
 
 .c-card {
   position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* : Elements : */
+
+.c-card__content {
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
 }
 
 /*______________________
@@ -1266,20 +1289,6 @@ ________________________
 
 .c-swiper {
   position: relative;
-}
-
-.swiper-slide {
-  opacity: 0;
-  filter: alpha(opacity=0);
-  visibility: hidden;
-  -webkit-transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
-  transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
-}
-
-.swiper-slide-active {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  visibility: visible;
 }
 
 .swiper-button-disabled {
@@ -1870,7 +1879,7 @@ ________________________
 
 @media only screen and (max-width: 768px) {
   .container {
-    max-width: 528px;
+    max-width: 688px;
   }
 }
 

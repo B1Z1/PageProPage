@@ -6,4 +6,13 @@ ________________________
 
 .c-card{
     position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* : Elements : */
+.c-card{
+    &__content{
+        @include indent(padding, 40px, 40px, 40px, 40px);
+    }
 }

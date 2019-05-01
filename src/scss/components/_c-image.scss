@@ -4,7 +4,7 @@ Component Image
 ________________________
 */
 
-.c-image{
+.c-image{ 
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -26,12 +26,21 @@ ________________________
         border-radius: 50%;
         overflow: hidden;
     }
+    &__card{
+        vertical-align: middle;
+    }
 }
 
 /* : Modificators : */
 .c-image{
     &--transl{
         transform: translateY(25%);
+    }
+    &--h180{
+        height: 180px;
+    }
+    &--h210{
+        height: 210px;
     }
 }
 

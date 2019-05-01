@@ -16,22 +16,32 @@ window.addEventListener('load', function () {
   });
   var newsSwiper = new Swiper('#more-news', {
     speed: 400,
-    spaceBetween: 0,
+    spaceBetween: 40,
     touchRatio: 0,
-    effect: 'fade',
+    slidesPerView: 1,
+    slidesPerColumn: 2,
     navigation: {
-      nextEl: '.c-button__swiper--next',
-      prevEl: '.c-button__swiper--prev'
+      nextEl: '#more-news--next',
+      prevEl: '#more-news--prev'
     }
   });
   var trendingSwiper = new Swiper('#trending', {
     speed: 400,
-    spaceBetween: 0,
+    slidesPerView: 3,
+    spaceBetween: 40,
     touchRatio: 0,
-    effect: 'fade',
     navigation: {
-      nextEl: '.c-button__swiper--next',
-      prevEl: '.c-button__swiper--prev'
+      nextEl: '#trending--next',
+      prevEl: '#trending--prev'
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 2
+      },
+      480: {
+        slidesPerView: 1,
+        slidesPerColumn: 2
+      }
     }
   });
 });
