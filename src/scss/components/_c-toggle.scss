@@ -1,0 +1,26 @@
+/*______________________
+
+Component Toggle
+________________________
+*/
+
+.c-toggle{
+    display: none;
+    &:checked + .c-toggle__target{
+        max-height: 300px;
+    }
+}
+
+/* : Elements : */
+.c-toggle{
+    &__target{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s ease-in-out;
+    }
+    &__arrow{
+        vertical-align: middle;
+        @include font-size('normal');
+        cursor: pointer;
+    }
+}

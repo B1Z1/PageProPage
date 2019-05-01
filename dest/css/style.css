@@ -550,88 +550,6 @@ th {
   background-color: #FFFFFF;
 }
 
-/* : Margin Set : */
-
-.mt-10 {
-  margin-top: 10px;
-}
-
-.mr-10 {
-  margin-right: 10px;
-}
-
-.mb-10 {
-  margin-bottom: 10px;
-}
-
-.ml-10 {
-  margin-left: 10px;
-}
-
-.mt-20 {
-  margin-top: 20px;
-}
-
-.mr-20 {
-  margin-right: 20px;
-}
-
-.mb-20 {
-  margin-bottom: 20px;
-}
-
-.ml-20 {
-  margin-left: 20px;
-}
-
-.mt-30 {
-  margin-top: 30px;
-}
-
-.mr-30 {
-  margin-right: 30px;
-}
-
-.mb-30 {
-  margin-bottom: 30px;
-}
-
-.ml-30 {
-  margin-left: 30px;
-}
-
-.mt-40 {
-  margin-top: 40px;
-}
-
-.mr-40 {
-  margin-right: 40px;
-}
-
-.mb-40 {
-  margin-bottom: 40px;
-}
-
-.ml-40 {
-  margin-left: 40px;
-}
-
-.mt-60 {
-  margin-top: 60px;
-}
-
-.mr-60 {
-  margin-right: 60px;
-}
-
-.mb-60 {
-  margin-bottom: 60px;
-}
-
-.ml-60 {
-  margin-left: 60px;
-}
-
 /* : Columns : */
 
 .col-mbl-1,
@@ -978,8 +896,8 @@ ________________________
   opacity: 0;
   filter: alpha(opacity=0);
   visibility: hidden;
-  -webkit-transition: left .5s ease-in-out;
-  transition: left .5s ease-in-out;
+  -webkit-transition: left .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
+  transition: left .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
   overflow: scroll;
   z-index: 999;
 }
@@ -1221,6 +1139,35 @@ ________________________
   cursor: pointer;
 }
 
+/*______________________
+
+Component Toggle
+________________________
+*/
+
+.c-toggle {
+  display: none;
+}
+
+.c-toggle:checked + .c-toggle__target {
+  max-height: 300px;
+}
+
+/* : Elements : */
+
+.c-toggle__target {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .5s ease-in-out;
+  transition: max-height .5s ease-in-out;
+}
+
+.c-toggle__arrow {
+  vertical-align: middle;
+  font-size: 13px;
+  cursor: pointer;
+}
+
 /* : My Reset Classes : */
 
 .reset-padding {
@@ -1229,6 +1176,88 @@ ________________________
 
 .reset-margin {
   margin: 0;
+}
+
+/* : Margin Set : */
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.ml-40 {
+  margin-left: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mr-60 {
+  margin-right: 60px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.ml-60 {
+  margin-left: 60px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1642,6 +1671,19 @@ ________________________
   .c-image__avatar {
     width: 16px;
     height: 16px;
+  }
+
+  .c-navigation__second {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .l-header__sygnet {

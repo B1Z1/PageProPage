@@ -13,7 +13,7 @@ ________________________
     box-shadow: 0 0 60px rgba(0,0,0,.6);
     opacity: 0;
     visibility: hidden;
-    transition: left .5s ease-in-out;
+    transition: left .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
     overflow: scroll;
     z-index: 999;
 }
