@@ -7,44 +7,66 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 window.addEventListener('load', function () {
-  var mobilemenu = new MobileMenu({
-    burger: 'c-burger',
-    aside: 'l-mobile-sidebar',
+  var mobilemenu = new ClickManipulation({
+    target: 'c-burger',
+    closeTarget: 'notthis',
+    //If We need a close target, add close for this 
+    animated: 'l-mobile-sidebar',
     active: 'l-mobile-sidebar--active'
   });
 });
+/**
+ * 
+ * Mobile Menu Class
+ * 
+ */
 
-var MobileMenu =
+var ClickManipulation =
 /*#__PURE__*/
 function () {
-  function MobileMenu(object) {
-    _classCallCheck(this, MobileMenu);
+  function ClickManipulation(object) {
+    _classCallCheck(this, ClickManipulation);
 
     this.classes = {
-      burger: ".".concat(object.burger),
-      aside: ".".concat(object.aside)
+      target: ".".concat(object.target),
+      closeTarget: ".".concat(object.closeTarget),
+      animated: ".".concat(object.animated),
+      active: object.active
     };
-    this.aside = document.querySelector(".".concat(object.aside));
+    this.target = document.querySelector(".".concat(object.target));
+    this.closeTarget = object.closeTarget === 'notthis' ? null : document.querySelector(".".concat(object.closeTarget));
+    this.animated = document.querySelector(".".concat(object.animated));
     this.active = object.active;
-    if (this.aside) this.init();
+    if (this.animated) this.init();
   }
 
-  _createClass(MobileMenu, [{
+  _createClass(ClickManipulation, [{
     key: "init",
     value: function init() {
       var _this = this;
 
       window.addEventListener('click', function (ev) {
         var target = ev.target;
-
-        if (target.closest(_this.classes.burger)) {
-          _this.aside.classList.add(_this.active);
-        } else if (!target.closest(_this.classes.aside)) {
-          _this.aside.classList.remove(_this.active);
-        }
+        if (_this.closeTarget !== null && _this.getClosest(target, _this.classes.closeTarget)) _this.deactivate();else if (_this.getClosest(target, _this.classes.target)) _this.activate();else if (_this.getClosest(target, _this.classes.animated, 'not')) _this.deactivate();
       });
+    }
+  }, {
+    key: "getClosest",
+    value: function getClosest(target, classel) {
+      var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+      return type === 'not' ? !target.closest(classel) : target.closest(classel);
+    }
+  }, {
+    key: "deactivate",
+    value: function deactivate() {
+      this.animated.classList.remove(this.active);
+    }
+  }, {
+    key: "activate",
+    value: function activate() {
+      this.animated.classList.add(this.active);
     }
   }]);
 
-  return MobileMenu;
+  return ClickManipulation;
 }();

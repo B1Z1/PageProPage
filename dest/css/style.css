@@ -1584,7 +1584,7 @@ ________________________
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 480px) {
   .col-mbl-1,
   .col-mbl-2,
   .col-mbl-3,
@@ -1663,7 +1663,7 @@ ________________________
   }
 
   .container {
-    max-width: 423px;
+    max-width: 528px;
     padding-right: 24px;
     padding-left: 24px;
   }
