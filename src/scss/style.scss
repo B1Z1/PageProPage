@@ -30,17 +30,20 @@
 @import "./layouts/l-footer";
 
 /* : Components : */
+//Elements
 @import "./components/c-list";
 @import "./components/c-link";
 @import "./components/c-button";
+@import "./components/c-image";
+
 @import "./components/c-card";
 @import "./components/c-date";
 @import "./components/c-form";
-@import "./components/c-image";
 @import "./components/c-jumbotron";
 @import "./components/c-navigation";
-@import "./components/c-sygnet";
 @import "./components/c-burger";
+
+//Animation targets
 @import "./components/c-fade";
 @import "./components/c-toggle";
 

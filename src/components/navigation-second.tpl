@@ -4,12 +4,12 @@
 <input type="checkbox" id="second-menu-<!-- *** -->" class="c-fade">
 <nav class="c-navigation__second c-fade__target ui-bck--main">
     <ul class="c-list">
-        <li class="c-list__element c-list__element--mb10 c-list__element--hovopac"><a href="#" class="c-link">World news</a></li>
-        <li class="c-list__element c-list__element--mb10 c-list__element--hovopac"><a href="#" class="c-link">Travel</a></li>
-        <li class="c-list__element c-list__element--mb10 c-list__element--hovopac"><a href="#" class="c-link">Technology</a></li>
-        <li class="c-list__element c-list__element--mb10 c-list__element--hovopac"><a href="#" class="c-link">City</a></li>
-        <li class="c-list__element c-list__element--mb10 c-list__element--hovopac"><a href="#" class="c-link">Culture</a></li>
-        <li class="c-list__element c-list__element--mb10 c-list__element--hovopac"><a href="#" class="c-link">More...</a></li>
+        <li class="c-list__element"><a href="#" class="c-link">World news</a></li>
+        <li class="c-list__element"><a href="#" class="c-link">Travel</a></li>
+        <li class="c-list__element"><a href="#" class="c-link">Technology</a></li>
+        <li class="c-list__element"><a href="#" class="c-link">City</a></li>
+        <li class="c-list__element"><a href="#" class="c-link">Culture</a></li>
+        <li class="c-list__element"><a href="#" class="c-link">More...</a></li>
     </ul>
 </nav>
 <!-- : Component Navigation Second Menu End : -->
