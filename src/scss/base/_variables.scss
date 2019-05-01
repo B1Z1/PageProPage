@@ -40,4 +40,32 @@ $fontSizes: (
     h3: 16px,
     h2: 24px,
     h1: 32px
+);
+
+/* : Font familys : */
+$fontFamilys: (
+    helvetica: (
+        oblique: (
+            font-weight: 300,
+            font-style: italic,
+        ),
+        regular: (
+            font-weight: 400,
+            font-style: normal,
+        ),
+        bold: (
+            font-weight: 700,
+            tyle: normal,
+        )
+    ),
+    acumin-pro: (
+        regular: (
+            font-weight: 400,
+            font-style: normal,
+        ),
+        bold: (
+            font-weight: 700,
+            font-style: normal,
+        )
+    )
 )

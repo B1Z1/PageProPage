@@ -12,13 +12,11 @@
 
 /* : Font sizes : */
 
+/* : Font familys : */
+
 /* : Font size mixin : */
 
 /* : Margin generator : */
-
-/* : Mixin for choose one of the parent Font family Acumin : */
-
-/* : Mixin font style : */
 
 /* : Colors : */
 
@@ -27,7 +25,7 @@
 /* : Helvetica Regular Include : */
 
 @font-face {
-  font-family: "Helvetica-Regular";
+  font-family: "helvetica";
   src: url("../fonts/Helvetica/Helvetica-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
@@ -36,16 +34,16 @@
 /* : Helvetica Bold Include : */
 
 @font-face {
-  font-family: "Helvetica-Bold";
+  font-family: "helvetica";
   src: url("../fonts/Helvetica/Helvetica-Bold.woff") format("woff");
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* : Helvetica Oblique Include : */
 
 @font-face {
-  font-family: "Helvetica-Oblique";
+  font-family: "helvetica";
   src: url("../fonts/Helvetica/Helvetica-Oblique.woff") format("woff");
   font-style: italic;
   font-weight: 300;
@@ -681,9 +679,6 @@ th {
 html,
 body {
   font-size: 13px;
-  font-family: 'Helvetica-Regular', Arial;
-  font-weight: 400;
-  font-style: normal;
   color: #202124;
   line-height: 1.5em;
   overflow-x: hidden;
@@ -1016,9 +1011,6 @@ ________________________
   padding-bottom: 12px;
   padding-left: 30px;
   font-size: 11px;
-  font-family: 'Helvetica-Bold', Arial;
-  font-weight: 700;
-  font-style: normal;
   background-color: #F6F8F9;
   color: #FFFFFF;
   border-radius: 6px;
@@ -1089,20 +1081,6 @@ Component Title
 ________________________
 */
 
-.c-title {
-  font-family: 'Helvetica-Bold', Arial;
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* : Modificators : */
-
-.c-title--acumin {
-  font-family: acumin-pro, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 /*______________________
 
 Component Global Text Options
@@ -1128,12 +1106,6 @@ ________________________
 Component Date
 ________________________
 */
-
-.c-date {
-  font-family: 'Helvetica-Oblique', Arial;
-  font-weight: 300;
-  font-style: italic;
-}
 
 /*______________________
 
@@ -1164,9 +1136,6 @@ ________________________
 
 .c-navigation {
   font-size: 11px;
-  font-family: 'Helvetica-Bold', Arial;
-  font-weight: 700;
-  font-style: normal;
 }
 
 /* : Elements : */
@@ -1228,6 +1197,42 @@ ________________________
 
 .c-bordbott--greylighter {
   border-color: #EBEDED;
+}
+
+/*______________________
+
+Component All Font Familys from template
+________________________
+*/
+
+.c-ff-helvetica-oblique {
+  font-family: helvetica;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.c-ff-helvetica-regular {
+  font-family: helvetica;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c-ff-helvetica-bold {
+  font-family: helvetica;
+  font-weight: 700;
+  tyle: normal;
+}
+
+.c-ff-acumin-pro-regular {
+  font-family: acumin-pro;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c-ff-acumin-pro-bold {
+  font-family: acumin-pro;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /*______________________

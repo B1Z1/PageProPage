@@ -4,7 +4,6 @@
 
 html, body{
     @include font-size('normal');
-    @include font-family-getter('helvetica', 'regular');
     @include color(bluedarker, color);
     line-height: 1.5em;
     overflow-x: hidden;

@@ -1,0 +1,16 @@
+/*______________________
+
+Component All Font Familys from template
+________________________
+*/
+
+@each $family, $types in $fontFamilys{
+    @each $type, $styles in $types{
+        .c-ff-#{$family}-#{$type}{
+            font-family: $family;
+            @each $style, $option in $styles{
+                #{$style}: $option;
+            }
+        }
+    }
+}
