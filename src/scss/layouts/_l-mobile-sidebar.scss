@@ -7,27 +7,36 @@ ________________________
 .l-mobile-sidebar{
     position: fixed;
     top: 0;
-    left: -85vw;
-    width: 85vw;
+    left: 0;
+    width: 100vw;
     height: 100vh;
-    box-shadow: 0 0 60px rgba(0,0,0,.6);
     opacity: 0;
     visibility: hidden;
-    transition: left .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
+    @include color(rgba(0,0,0,.5), background-color);
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
     overflow: scroll;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 /* : Elements : */
 .l-mobile-sidebar{
+    &__wrapper{
+        position: relative;
+        left: -85%;
+        width: 85%;
+        box-shadow: 0 0 60px rgba(0,0,0,.6);
+        transition: left .5s ease-in-out;
+    }
 }
 
 /* : Modificators : */
 .l-mobile-sidebar{
     &--active{
-        left: 0;
         opacity: 1;
         visibility: visible;
+        .l-mobile-sidebar__wrapper{
+            left: 0;
+        }
     }
     &--indent{
         @include indent(padding, 40px, 20px, 90px, 40px);

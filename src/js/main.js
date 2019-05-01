@@ -1,7 +1,7 @@
 window.addEventListener('load', ()=>{
     const mobilemenu = new ClickManipulation({
         target: 'c-burger',
-        closeTarget: 'notthis', //If We need a close target, add close for this 
+        closeTarget: 'l-mobile-sidebar', //If We need a close target, add close for this 
         animated: 'l-mobile-sidebar',
         active: 'l-mobile-sidebar--active',
     });
@@ -30,19 +30,13 @@ class ClickManipulation{
     }
 
     init(){
-        window.addEventListener('click', (ev)=>{
-            let target = ev.target;
-            if ( this.closeTarget !== null && this.getClosest(target, this.classes.closeTarget) )
-                this.deactivate();             
-            else if ( this.getClosest( target, this.classes.target ) )
-                this.activate();
-            else if ( this.getClosest(target, this.classes.animated, 'not' ) ) 
-                this.deactivate();   
-        });
-    }
-
-    getClosest(target, classel, type = ''){
-        return type === 'not' ? !target.closest(classel):target.closest(classel);
+        this.target.addEventListener('click',()=>{
+            this.activate();
+        })
+        this.closeTarget.addEventListener('click',(ev)=>{
+            if ( ev.target === this.animated )
+                this.deactivate();
+        })
     }
 
     deactivate(){

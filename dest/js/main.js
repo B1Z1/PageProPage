@@ -9,7 +9,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 window.addEventListener('load', function () {
   var mobilemenu = new ClickManipulation({
     target: 'c-burger',
-    closeTarget: 'notthis',
+    closeTarget: 'l-mobile-sidebar',
     //If We need a close target, add close for this 
     animated: 'l-mobile-sidebar',
     active: 'l-mobile-sidebar--active'
@@ -45,16 +45,12 @@ function () {
     value: function init() {
       var _this = this;
 
-      window.addEventListener('click', function (ev) {
-        var target = ev.target;
-        if (_this.closeTarget !== null && _this.getClosest(target, _this.classes.closeTarget)) _this.deactivate();else if (_this.getClosest(target, _this.classes.target)) _this.activate();else if (_this.getClosest(target, _this.classes.animated, 'not')) _this.deactivate();
+      this.target.addEventListener('click', function () {
+        _this.activate();
       });
-    }
-  }, {
-    key: "getClosest",
-    value: function getClosest(target, classel) {
-      var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
-      return type === 'not' ? !target.closest(classel) : target.closest(classel);
+      this.closeTarget.addEventListener('click', function (ev) {
+        if (ev.target === _this.animated) _this.deactivate();
+      });
     }
   }, {
     key: "deactivate",
