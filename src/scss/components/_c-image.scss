@@ -42,13 +42,24 @@ ________________________
     &--h210{
         height: 210px;
     }
+    &--br6{
+        border-radius: 6px;
+    }
 }
 
 @media only screen and ( max-width: nth(nth($sizes, 1), 2) ){
+    /* : Elements : */
     .c-image{
         &__avatar{
             width: 16px;
             height: 16px;
+        }
+    }
+
+    /* : Modificators : */
+    .c-image{
+        &--h210{
+            height: 180px;
         }
     }
 }

@@ -37,3 +37,12 @@ ________________________
         left: 40px;
     }
 }
+
+@media only screen and ( max-width: nth(nth($sizes, 1), 2) ){
+    /* : Modificators : */
+    .c-card{
+        &--big{
+            @include indent(padding, 104px, '', '', '');
+        }
+    }
+}

@@ -1,6 +1,42 @@
-.reset-padding{
-    padding: 0!important;
+@each $name, $size in $sizes {
+    @if ( $name == 'mbl' ){
+        .reset-padding{
+            padding: 0!important;
+        }
+        .reset-tpadding{
+            padding-top: 0!important;
+        }
+        .reset-rpadding{
+            padding-right: 0!important;
+        }
+        .reset-bpadding{
+            padding-bottom: 0!important;
+        }
+        .reset-lpadding{
+            padding-left: 0!important;
+        }
+    }
+    @else{
+        @media only screen and ( min-width: $size ) {
+            .reset-#{$name}-padding{
+                padding: 0!important;
+            }
+            .reset-#{$name}-tpadding{
+                padding-top: 0!important;
+            }
+            .reset-#{$name}-rpadding{
+                padding-right: 0!important;
+            }
+            .reset-#{$name}-bpadding{
+                padding-bottom: 0!important;
+            }
+            .reset-#{$name}-lpadding{
+                padding-left: 0!important;
+            }
+        }
+    }
 }
+
 .reset-margin{
     margin: 0;
 }

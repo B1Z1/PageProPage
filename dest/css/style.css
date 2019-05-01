@@ -826,11 +826,10 @@ ________________________
 }
 
 .container {
-  max-width: 1240px;
+  padding-right: 24px;
+  padding-left: 24px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 40px;
-  padding-left: 40px;
 }
 
 /*______________________
@@ -1093,6 +1092,10 @@ ________________________
 
 .c-image--h210 {
   height: 210px;
+}
+
+.c-image--br6 {
+  border-radius: 6px;
 }
 
 /*______________________
@@ -1386,6 +1389,22 @@ ________________________
   padding: 0 !important;
 }
 
+.reset-tpadding {
+  padding-top: 0 !important;
+}
+
+.reset-rpadding {
+  padding-right: 0 !important;
+}
+
+.reset-bpadding {
+  padding-bottom: 0 !important;
+}
+
+.reset-lpadding {
+  padding-left: 0 !important;
+}
+
 .reset-margin {
   margin: 0;
 }
@@ -1650,6 +1669,32 @@ ________________________
             flex: 0 0 auto;
     width: auto;
   }
+
+  .container {
+    max-width: 688px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .reset-tbl-padding {
+    padding: 0 !important;
+  }
+
+  .reset-tbl-tpadding {
+    padding-top: 0 !important;
+  }
+
+  .reset-tbl-rpadding {
+    padding-right: 0 !important;
+  }
+
+  .reset-tbl-bpadding {
+    padding-bottom: 0 !important;
+  }
+
+  .reset-tbl-lpadding {
+    padding-left: 0 !important;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1755,6 +1800,30 @@ ________________________
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     width: auto;
+  }
+
+  .container {
+    max-width: 1240px;
+  }
+
+  .reset-lpt-padding {
+    padding: 0 !important;
+  }
+
+  .reset-lpt-tpadding {
+    padding-top: 0 !important;
+  }
+
+  .reset-lpt-rpadding {
+    padding-right: 0 !important;
+  }
+
+  .reset-lpt-bpadding {
+    padding-bottom: 0 !important;
+  }
+
+  .reset-lpt-lpadding {
+    padding-left: 0 !important;
   }
 }
 
@@ -1862,6 +1931,26 @@ ________________________
             flex: 0 0 auto;
     width: auto;
   }
+
+  .reset-pc-padding {
+    padding: 0 !important;
+  }
+
+  .reset-pc-tpadding {
+    padding-top: 0 !important;
+  }
+
+  .reset-pc-rpadding {
+    padding-right: 0 !important;
+  }
+
+  .reset-pc-bpadding {
+    padding-bottom: 0 !important;
+  }
+
+  .reset-pc-lpadding {
+    padding-left: 0 !important;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1897,12 +1986,6 @@ ________________________
     -ms-grid-row: 6;
     -ms-grid-column: 1;
     -ms-grid-column-span: 9;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .container {
-    max-width: 688px;
   }
 }
 
@@ -1985,15 +2068,23 @@ ________________________
     display: block;
   }
 
-  .container {
-    max-width: 432px;
-    padding-right: 24px;
-    padding-left: 24px;
-  }
+  /* : Elements : */
 
   .c-image__avatar {
     width: 16px;
     height: 16px;
+  }
+
+  /* : Modificators : */
+
+  .c-image--h210 {
+    height: 180px;
+  }
+
+  /* : Modificators : */
+
+  .c-card--big {
+    padding-top: 104px;
   }
 
   .c-navigation__second {

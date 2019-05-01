@@ -38,7 +38,7 @@ window.addEventListener('load', function () {
       1024: {
         slidesPerView: 2
       },
-      480: {
+      767: {
         slidesPerView: 1,
         slidesPerColumn: 2
       }
