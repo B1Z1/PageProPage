@@ -571,7 +571,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 8.33333%;
           flex: 0 0 8.33333%;
-  width: 8.33333%;
+  max-width: 8.33333%;
 }
 
 .col-mbl-2 {
@@ -579,7 +579,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 16.66667%;
           flex: 0 0 16.66667%;
-  width: 16.66667%;
+  max-width: 16.66667%;
 }
 
 .col-mbl-3 {
@@ -587,7 +587,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
-  width: 25%;
+  max-width: 25%;
 }
 
 .col-mbl-4 {
@@ -595,7 +595,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 33.33333%;
           flex: 0 0 33.33333%;
-  width: 33.33333%;
+  max-width: 33.33333%;
 }
 
 .col-mbl-5 {
@@ -603,7 +603,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 41.66667%;
           flex: 0 0 41.66667%;
-  width: 41.66667%;
+  max-width: 41.66667%;
 }
 
 .col-mbl-6 {
@@ -611,7 +611,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
-  width: 50%;
+  max-width: 50%;
 }
 
 .col-mbl-7 {
@@ -619,7 +619,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 58.33333%;
           flex: 0 0 58.33333%;
-  width: 58.33333%;
+  max-width: 58.33333%;
 }
 
 .col-mbl-8 {
@@ -627,7 +627,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 66.66667%;
           flex: 0 0 66.66667%;
-  width: 66.66667%;
+  max-width: 66.66667%;
 }
 
 .col-mbl-9 {
@@ -635,7 +635,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 75%;
           flex: 0 0 75%;
-  width: 75%;
+  max-width: 75%;
 }
 
 .col-mbl-10 {
@@ -643,7 +643,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 83.33333%;
           flex: 0 0 83.33333%;
-  width: 83.33333%;
+  max-width: 83.33333%;
 }
 
 .col-mbl-11 {
@@ -651,7 +651,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 91.66667%;
           flex: 0 0 91.66667%;
-  width: 91.66667%;
+  max-width: 91.66667%;
 }
 
 .col-mbl-12 {
@@ -659,7 +659,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-  width: 100%;
+  max-width: 100%;
 }
 
 .col-mbl-auto {
@@ -667,7 +667,7 @@ th {
      -moz-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: auto;
+  max-width: auto;
 }
 
 /* : Base : */
@@ -1705,7 +1705,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 8.33333%;
             flex: 0 0 8.33333%;
-    width: 8.33333%;
+    max-width: 8.33333%;
   }
 
   .col-tbl-2 {
@@ -1713,7 +1713,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 16.66667%;
             flex: 0 0 16.66667%;
-    width: 16.66667%;
+    max-width: 16.66667%;
   }
 
   .col-tbl-3 {
@@ -1721,7 +1721,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
-    width: 25%;
+    max-width: 25%;
   }
 
   .col-tbl-4 {
@@ -1729,7 +1729,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 33.33333%;
             flex: 0 0 33.33333%;
-    width: 33.33333%;
+    max-width: 33.33333%;
   }
 
   .col-tbl-5 {
@@ -1737,7 +1737,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 41.66667%;
             flex: 0 0 41.66667%;
-    width: 41.66667%;
+    max-width: 41.66667%;
   }
 
   .col-tbl-6 {
@@ -1745,7 +1745,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
-    width: 50%;
+    max-width: 50%;
   }
 
   .col-tbl-7 {
@@ -1753,7 +1753,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 58.33333%;
             flex: 0 0 58.33333%;
-    width: 58.33333%;
+    max-width: 58.33333%;
   }
 
   .col-tbl-8 {
@@ -1761,7 +1761,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 66.66667%;
             flex: 0 0 66.66667%;
-    width: 66.66667%;
+    max-width: 66.66667%;
   }
 
   .col-tbl-9 {
@@ -1769,7 +1769,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 75%;
             flex: 0 0 75%;
-    width: 75%;
+    max-width: 75%;
   }
 
   .col-tbl-10 {
@@ -1777,7 +1777,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 83.33333%;
             flex: 0 0 83.33333%;
-    width: 83.33333%;
+    max-width: 83.33333%;
   }
 
   .col-tbl-11 {
@@ -1785,7 +1785,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 91.66667%;
             flex: 0 0 91.66667%;
-    width: 91.66667%;
+    max-width: 91.66667%;
   }
 
   .col-tbl-12 {
@@ -1793,7 +1793,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    width: 100%;
+    max-width: 100%;
   }
 
   .col-tbl-auto {
@@ -1801,7 +1801,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    width: auto;
+    max-width: auto;
   }
 
   .container {
@@ -1965,7 +1965,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 8.33333%;
             flex: 0 0 8.33333%;
-    width: 8.33333%;
+    max-width: 8.33333%;
   }
 
   .col-lpt-2 {
@@ -1973,7 +1973,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 16.66667%;
             flex: 0 0 16.66667%;
-    width: 16.66667%;
+    max-width: 16.66667%;
   }
 
   .col-lpt-3 {
@@ -1981,7 +1981,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
-    width: 25%;
+    max-width: 25%;
   }
 
   .col-lpt-4 {
@@ -1989,7 +1989,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 33.33333%;
             flex: 0 0 33.33333%;
-    width: 33.33333%;
+    max-width: 33.33333%;
   }
 
   .col-lpt-5 {
@@ -1997,7 +1997,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 41.66667%;
             flex: 0 0 41.66667%;
-    width: 41.66667%;
+    max-width: 41.66667%;
   }
 
   .col-lpt-6 {
@@ -2005,7 +2005,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
-    width: 50%;
+    max-width: 50%;
   }
 
   .col-lpt-7 {
@@ -2013,7 +2013,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 58.33333%;
             flex: 0 0 58.33333%;
-    width: 58.33333%;
+    max-width: 58.33333%;
   }
 
   .col-lpt-8 {
@@ -2021,7 +2021,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 66.66667%;
             flex: 0 0 66.66667%;
-    width: 66.66667%;
+    max-width: 66.66667%;
   }
 
   .col-lpt-9 {
@@ -2029,7 +2029,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 75%;
             flex: 0 0 75%;
-    width: 75%;
+    max-width: 75%;
   }
 
   .col-lpt-10 {
@@ -2037,7 +2037,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 83.33333%;
             flex: 0 0 83.33333%;
-    width: 83.33333%;
+    max-width: 83.33333%;
   }
 
   .col-lpt-11 {
@@ -2045,7 +2045,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 91.66667%;
             flex: 0 0 91.66667%;
-    width: 91.66667%;
+    max-width: 91.66667%;
   }
 
   .col-lpt-12 {
@@ -2053,7 +2053,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    width: 100%;
+    max-width: 100%;
   }
 
   .col-lpt-auto {
@@ -2061,7 +2061,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    width: auto;
+    max-width: auto;
   }
 
   .container {
@@ -2223,7 +2223,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 8.33333%;
             flex: 0 0 8.33333%;
-    width: 8.33333%;
+    max-width: 8.33333%;
   }
 
   .col-pc-2 {
@@ -2231,7 +2231,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 16.66667%;
             flex: 0 0 16.66667%;
-    width: 16.66667%;
+    max-width: 16.66667%;
   }
 
   .col-pc-3 {
@@ -2239,7 +2239,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
-    width: 25%;
+    max-width: 25%;
   }
 
   .col-pc-4 {
@@ -2247,7 +2247,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 33.33333%;
             flex: 0 0 33.33333%;
-    width: 33.33333%;
+    max-width: 33.33333%;
   }
 
   .col-pc-5 {
@@ -2255,7 +2255,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 41.66667%;
             flex: 0 0 41.66667%;
-    width: 41.66667%;
+    max-width: 41.66667%;
   }
 
   .col-pc-6 {
@@ -2263,7 +2263,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
-    width: 50%;
+    max-width: 50%;
   }
 
   .col-pc-7 {
@@ -2271,7 +2271,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 58.33333%;
             flex: 0 0 58.33333%;
-    width: 58.33333%;
+    max-width: 58.33333%;
   }
 
   .col-pc-8 {
@@ -2279,7 +2279,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 66.66667%;
             flex: 0 0 66.66667%;
-    width: 66.66667%;
+    max-width: 66.66667%;
   }
 
   .col-pc-9 {
@@ -2287,7 +2287,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 75%;
             flex: 0 0 75%;
-    width: 75%;
+    max-width: 75%;
   }
 
   .col-pc-10 {
@@ -2295,7 +2295,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 83.33333%;
             flex: 0 0 83.33333%;
-    width: 83.33333%;
+    max-width: 83.33333%;
   }
 
   .col-pc-11 {
@@ -2303,7 +2303,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 91.66667%;
             flex: 0 0 91.66667%;
-    width: 91.66667%;
+    max-width: 91.66667%;
   }
 
   .col-pc-12 {
@@ -2311,7 +2311,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    width: 100%;
+    max-width: 100%;
   }
 
   .col-pc-auto {
@@ -2319,7 +2319,7 @@ ________________________
        -moz-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    width: auto;
+    max-width: auto;
   }
 
   .reset-pc-padding {
